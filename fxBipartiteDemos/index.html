@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+    <head>
+        <title>fxBiPartite Demo</title>
+        <meta charset="utf-8">
+        <!-- <script type = 'text/javascript' src='https://cdn.jsdelivr.net/gh/MichaelRFox/fxBiPartite/dist/fxBiPartite.js'></script> -->
+        <script type = 'text/javascript' src='../../fxBiPartite/dist/fxBiPartite.js'></script>
+
+        <style>
+           
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: tahoma, sans;
+            }
+
+            .biPartite-mainBar:hover {
+                cursor: pointer;
+            }
+
+            .biPartite-mainBar rect{
+              stroke-width: 0.5px;
+              stroke: rgb(0, 0, 0);
+              stroke-opacity: 0;
+            }
+
+            .biPartite-percentage, .biPartite-label {
+                user-select: none;
+                font-family: tahoma, sans;
+            }
+
+            .biPartite-percentage {
+                text-anchor: middle;
+                font-size: 1.5em;
+
+            }
+
+            .biPartite-label {
+                font-size: 1.5em;
+            }
+
+            .chart {
+                width: 90vw;
+                height: 90vh;
+                margin: 0 auto;
+                outline: 1pt solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>fxBiPartite Demonstration</h1>
+        <div id = 'chartDiv' class = 'chart'></div>
+
+        <script>
+
+            data = [{"source": "Lite", "target": "CA", "value": 16},
+                    {"source": "Small", "target": "CA", "value": 1278},
+                    {"source": "Medium", "target": "CA", "value": 27},
+                    {"source": "Plus", "target": "CA", "value": 58},
+                    {"source": "Grand", "target": "CA", "value": 1551},
+                    {"source": "Elite", "target": "CA", "value": 141},
+                    {"source": "Lite", "target": "AZ", "value": 5453},
+                    {"source": "Small", "target": "AZ", "value": 683},
+                    {"source": "Medium", "target": "AZ", "value": 862},
+                    {"source": "Grand", "target": "AZ", "value": 6228},
+                    {"source": "Lite", "target": "AL", "value": 15001},
+                    {"source": "Small", "target": "AL", "value": 527},
+                    {"source": "Medium", "target": "AL", "value": 836},
+                    {"source": "Plus", "target": "AL", "value": 28648},
+                    {"source": "Grand", "target": "AL", "value": 3},
+                    {"source": "Lite", "target": "CO", "value": 13},
+                    {"source": "Small", "target": "CO", "value": 396},
+                    {"source": "Medium", "target": "CO", "value": 362},
+                    {"source": "Plus", "target": "CO", "value": 78},
+                    {"source": "Grand", "target": "CO", "value": 2473},
+                    {"source": "Elite", "target": "CO", "value": 2063},
+                    {"source": "Medium", "target": "DE", "value": 203},
+                    {"source": "Grand", "target": "DE", "value": 686},
+                    {"source": "Elite", "target": "DE", "value": 826},
+                    {"source": "Lite", "target": "KS", "value": 1738},
+                    {"source": "Small", "target": "KS", "value": 12925},
+                    {"source": "Medium", "target": "KS", "value": 15413},
+                    {"source": "Small", "target": "GA", "value": 2166},
+                    {"source": "Medium", "target": "GA", "value": 86},
+                    {"source": "Plus", "target": "GA", "value": 348},
+                    {"source": "Grand", "target": "GA", "value": 4244},
+                    {"source": "Elite", "target": "GA", "value": 1536},
+                    {"source": "Small", "target": "IA", "value": 351},
+                    {"source": "Grand", "target": "IA", "value": 405},
+                    {"source": "Small", "target": "IL", "value": 914},
+                    {"source": "Medium", "target": "IL", "value": 127},
+                    {"source": "Grand", "target": "IL", "value": 1470},
+                    {"source": "Elite", "target": "IL", "value": 516},
+                    {"source": "Lite", "target": "IN", "value": 43},
+                    {"source": "Small", "target": "IN", "value": 667},
+                    {"source": "Medium", "target": "IN", "value": 172},
+                    {"source": "Plus", "target": "IN", "value": 149},
+                    {"source": "Grand", "target": "IN", "value": 1380},
+                    {"source": "Elite", "target": "IN", "value": 791},
+                    {"source": "Small", "target": "FL", "value": 1},
+                    {"source": "Grand", "target": "FL", "value": 1},
+                    {"source": "Small", "target": "MD", "value": 1070},
+                    {"source": "Grand", "target": "MD", "value": 1171},
+                    {"source": "Elite", "target": "MD", "value": 33},
+                    {"source": "Plus", "target": "TX", "value": 1},
+                    {"source": "Small", "target": "MS", "value": 407},
+                    {"source": "Medium", "target": "MS", "value": 3},
+                    {"source": "Grand", "target": "MS", "value": 457},
+                    {"source": "Elite", "target": "MS", "value": 20},
+                    {"source": "Small", "target": "NC", "value": 557},
+                    {"source": "Medium", "target": "NC", "value": 167},
+                    {"source": "Plus", "target": "NC", "value": 95},
+                    {"source": "Grand", "target": "NC", "value": 1090},
+                    {"source": "Elite", "target": "NC", "value": 676},
+                    {"source": "Lite", "target": "NM", "value": 1195},
+                    {"source": "Small", "target": "NM", "value": 350},
+                    {"source": "Medium", "target": "NM", "value": 212},
+                    {"source": "Grand", "target": "NM", "value": 1509},
+                    {"source": "Lite", "target": "NV", "value": 3899},
+                    {"source": "Small", "target": "NV", "value": 147},
+                    {"source": "Medium", "target": "NV", "value": 455},
+                    {"source": "Plus", "target": "NV", "value": 1},
+                    {"source": "Grand", "target": "NV", "value": 4100},
+                    {"source": "Lite", "target": "OH", "value": 12},
+                    {"source": "Small", "target": "OH", "value": 634},
+                    {"source": "Medium", "target": "OH", "value": 749},
+                    {"source": "Plus", "target": "OH", "value": 119},
+                    {"source": "Grand", "target": "OH", "value": 3705},
+                    {"source": "Elite", "target": "OH", "value": 3456},
+                    {"source": "Small", "target": "PA", "value": 828},
+                    {"source": "Medium", "target": "PA", "value": 288},
+                    {"source": "Plus", "target": "PA", "value": 141},
+                    {"source": "Grand", "target": "PA", "value": 2625},
+                    {"source": "Elite", "target": "PA", "value": 1920},
+                    {"source": "Small", "target": "SC", "value": 1146},
+                    {"source": "Medium", "target": "SC", "value": 212},
+                    {"source": "Plus", "target": "SC", "value": 223},
+                    {"source": "Grand", "target": "SC", "value": 1803},
+                    {"source": "Elite", "target": "SC", "value": 761},
+                    {"source": "Small", "target": "TN", "value": 527},
+                    {"source": "Medium", "target": "TN", "value": 90},
+                    {"source": "Grand", "target": "TN", "value": 930},
+                    {"source": "Elite", "target": "TN", "value": 395},
+                    {"source": "Lite", "target": "ME", "value": 7232},
+                    {"source": "Small", "target": "ME", "value": 1272},
+                    {"source": "Medium", "target": "ME", "value": 1896},
+                    {"source": "Plus", "target": "ME", "value": 1},
+                    {"source": "Grand", "target": "ME", "value": 10782},
+                    {"source": "Elite", "target": "ME", "value": 1911},
+                    {"source": "Small", "target": "VA", "value": 495},
+                    {"source": "Medium", "target": "VA", "value": 32},
+                    {"source": "Plus", "target": "VA", "value": 7},
+                    {"source": "Grand", "target": "VA", "value": 1557},
+                    {"source": "Elite", "target": "VA", "value": 24},
+                    {"source": "Small", "target": "WA", "value": 460},
+                    {"source": "Plus", "target": "WA", "value": 88},
+                    {"source": "Grand", "target": "WA", "value": 956},
+                    {"source": "Small", "target": "WV", "value": 232},
+                    {"source": "Medium", "target": "WV", "value": 71},
+                    {"source": "Grand", "target": "WV", "value": 575},
+                    {"source": "Elite", "target": "WV", "value": 368}];
+
+            data = data.reduce( (a,b) => {return a.concat([Object.values(b)])}, []);
+
+            fxBiPartite.biPartite
+                .data(data)
+                .container(document.getElementById('chartDiv'))
+                .sort('barycentric')
+                .pad(2)
+                .show();    
+
+        </script>
+    </body>
+</html>
