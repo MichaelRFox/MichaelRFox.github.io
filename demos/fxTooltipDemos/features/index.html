@@ -153,15 +153,16 @@
                     .font('tahoma', '2em')
                     .arrowSize('1.5em')
                     .cursor('pointer')
-                    .padding('5px 3em 2em');
-                    //.minWidth(300);
+                    .padding('5px 3em 2em')
+                    .maxWidth('75%')
+                    .maxHeight('75%');
 
                 fxToolTip.create('fox3', "<p class='tipTitle'>Table in a Tooltip</p><p></p>" + table)
                     .padding('20px')
                     .minWidth('300px');
 
                 fxToolTip.create('fox4', "<span class='tipTitle'>Inline SVG</span>" + svg)
-                    .minWidth(250)
+                    .autoSize(false)
                     .boxShadow('none');
                 
 
