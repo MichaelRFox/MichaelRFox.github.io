@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>utils.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Tip.html">Tip</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Tip.html#content">content</a></li><li data-type='method' style='display: none;'><a href="Tip.html#orientation">orientation</a></li><li data-type='method' style='display: none;'><a href="Tip.html#preferredOrientation">preferredOrientation</a></li><li data-type='method' style='display: none;'><a href="Tip.html#autoPosition">autoPosition</a></li><li data-type='method' style='display: none;'><a href="Tip.html#autoSize">autoSize</a></li><li data-type='method' style='display: none;'><a href="Tip.html#mousePoint">mousePoint</a></li><li data-type='method' style='display: none;'><a href="Tip.html#trackMouse">trackMouse</a></li><li data-type='method' style='display: none;'><a href="Tip.html#cursor">cursor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#font">font</a></li><li data-type='method' style='display: none;'><a href="Tip.html#foregroundColor">foregroundColor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#backgroundColor">backgroundColor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#backgroundOpacity">backgroundOpacity</a></li><li data-type='method' style='display: none;'><a href="Tip.html#padding">padding</a></li><li data-type='method' style='display: none;'><a href="Tip.html#borderRadius">borderRadius</a></li><li data-type='method' style='display: none;'><a href="Tip.html#boxShadow">boxShadow</a></li><li data-type='method' style='display: none;'><a href="Tip.html#transitionVisible">transitionVisible</a></li><li data-type='method' style='display: none;'><a href="Tip.html#transitionHidden">transitionHidden</a></li><li data-type='method' style='display: none;'><a href="Tip.html#arrowSize">arrowSize</a></li><li data-type='method' style='display: none;'><a href="Tip.html#width">width</a></li><li data-type='method' style='display: none;'><a href="Tip.html#maxWidth">maxWidth</a></li><li data-type='method' style='display: none;'><a href="Tip.html#minWidth">minWidth</a></li><li data-type='method' style='display: none;'><a href="Tip.html#height">height</a></li><li data-type='method' style='display: none;'><a href="Tip.html#maxHeight">maxHeight</a></li><li data-type='method' style='display: none;'><a href="Tip.html#minHeight">minHeight</a></li><li data-type='method' style='display: none;'><a href="Tip.html#remove">remove</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-fxTip.html">fxTip</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fxTip.html#~create">create</a></li><li data-type='method' style='display: none;'><a href="module-fxTip.html#~remove">remove</a></li></ul></li><li><a href="module-index.html">index</a></li><li><a href="module-init.html">init</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-init.html#~setup">setup</a></li><li data-type='method' style='display: none;'><a href="module-init.html#~closeDown">closeDown</a></li></ul></li><li><a href="module-mouse.html">mouse</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-mouse.html#~getMouseCoordinates">getMouseCoordinates</a></li><li data-type='method' style='display: none;'><a href="module-mouse.html#~suspend">suspend</a></li></ul></li><li><a href="module-options.html">options</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-options.html#~applyOptions">applyOptions</a></li></ul></li><li><a href="module-orient.html">orient</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-orient.html#~orient">orient</a></li><li data-type='method' style='display: none;'><a href="module-orient.html#~optimumOrientation">optimumOrientation</a></li></ul></li><li><a href="module-style.html">style</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-style.html#~getRule">getRule</a></li><li data-type='method' style='display: none;'><a href="module-style.html#~getRuleIndex">getRuleIndex</a></li></ul></li><li><a href="module-tips.html">tips</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-tips.html#~getTipByElementId">getTipByElementId</a></li><li data-type='method' style='display: none;'><a href="module-tips.html#~sizeTip">sizeTip</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utils.html#~getElementCoordinates">getElementCoordinates</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~hexToRgb">hexToRgb</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~parseColor">parseColor</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~parseSize">parseSize</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkBoolean">checkBoolean</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkFontFamily">checkFontFamily</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkCSS">checkCSS</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="module-fxTip.html#~event:detectTargetRemoval">detectTargetRemoval</a></li><li><a href="module-mouse.html#~event:mouseover">mouseover</a></li><li><a href="module-mouse.html#~event:mousemove">mousemove</a></li><li><a href="module-mouse.html#~event:mouseout">mouseout</a></li><li><a href="module-utils.html#~event:windowResized">windowResized</a></li></ul><h3>Global</h3><ul><li><a href="global.html#targetTimer">targetTimer</a></li><li><a href="global.html#sheet">sheet</a></li><li><a href="global.html#rules">rules</a></li><li><a href="global.html#ttDiv">ttDiv</a></li><li><a href="global.html#ttContainer">ttContainer</a></li><li><a href="global.html#beforeRule">beforeRule</a></li><li><a href="global.html#afterRule">afterRule</a></li><li><a href="global.html#targetRule">targetRule</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#pseudoDiv">pseudoDiv</a></li><li><a href="global.html#mouseX">mouseX</a></li><li><a href="global.html#mouseY">mouseY</a></li><li><a href="global.html#tips">tips</a></li><li><a href="global.html#tipsIndex">tipsIndex</a></li><li><a href="global.html#windowWidth">windowWidth</a></li><li><a href="global.html#windowHeight">windowHeight</a></li><li><a href="global.html#aspectRatio">aspectRatio</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">utils.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** 
+ * @module utils
+ * @desc The utils module provides a variety of helper functions to parse and convert variables,
+ * get coordinates, and validate parameters.
+ */
+
+import {tips, tipsIndex} from './tips.js';
+import {pseudoDiv} from './init.js';
+import {mouseX, mouseY} from './mouse.js';
+
+/**
+ * Global variable containing the width of the current viewport. Updated by the
+ * [windowResized]{@link event:windowResized} event listener.
+ * @type number
+ * @global
+ */
+export let windowWidth;
+
+/**
+ * Global variable containing the height of the current viewport. Updated by the
+ * [windowResized]{@link event:windowResized} event listener.
+ * @type number
+ * @global
+ */
+export let windowHeight;
+
+/**
+ * Global variable containing the aspect ratio of the current viewport. Updated by the
+ * [windowResized]{@link event:windowResized} event listener.
+ * @type number
+ * @global
+ */
+export let aspectRatio;
+
+/** 
+ * @function windowResized
+ * @desc Monitors changes in window size and resets the global [windowWidth]{@link windowWidth},
+ * [windowHeight]{@link windowHeight}, and [aspectRatio]{@link aspectRatio} variables.
+ * @event
+ */
+export function windowResized() {
+    windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    aspectRatio = windowWidth / windowHeight;
+}
+
+/**
+ * @function getElementCoordinates
+ * @desc Gets the width, height, top, and left coordinate in the client space
+ * for any DOM element.
+ * @param {DOM.element} element The DOM element whose tooltip is being queried.
+ * @returns {Object} The width, height, top, and left coordinate in the client space
+ */
+export function getElementCoordinates (element) {
+    let cursorBuffer = 0;
+    let clientRect = {};
+    let boundingClientRect = {};
+
+    let target = tips[tipsIndex.indexOf(element.id)];
+    
+    if (target.mousePoint()) {// == true) {
+        clientRect.left = mouseX - cursorBuffer;
+        clientRect.top = mouseY - cursorBuffer;
+        clientRect.right = mouseX + cursorBuffer;
+        clientRect.bottom = mouseY + cursorBuffer;
+    } else {
+        boundingClientRect = element.getBoundingClientRect();
+        clientRect.left = boundingClientRect.left - cursorBuffer;
+        clientRect.top = boundingClientRect.top - cursorBuffer;
+        clientRect.right = boundingClientRect.right + cursorBuffer;
+        clientRect.bottom = boundingClientRect.bottom + cursorBuffer;
+    };
+    let height = clientRect.bottom - clientRect.top;
+    let width = clientRect.right - clientRect.left;
+
+    return {top: clientRect.top, left: clientRect.left, height: height, width: width};
+}
+
+/**
+ * @function hexToRgb
+ * @desc Converts a CSS string formatted as hex to rgb format.
+ * @param {string} hex The hex representation of the CSS color
+ * @returns {string} The color formatted as an rgb string.
+ */
+function hexToRgb(hex) {
+    let rgb = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
+    return [parseInt(rgb[1], 16), parseInt(rgb[2], 16), parseInt(rgb[3], 16)];
+}
+
+/**
+ * @function parseColor
+ * @desc Parses any valid CSS color
+ * @param {string} input Any valid css color.
+ * @returns {string} The CSS color formatted as an rgb string
+ */
+export function parseColor(input) {
+    pseudoDiv.style.color = input;
+    let rgb = getComputedStyle(pseudoDiv, null).color;
+    if (rgb.indexOf('#') !== -1) { 
+        rgb = hexToRgb(rgb);
+    } else rgb = rgb.match(/\d+/g);
+    return 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+}
+
+/**
+ * @function parseSize
+ * @desc Parses any valid CSS size, except for percentage.
+ * @param {(number | string)} size Any valid CSS size (e.g. 12px, 3em)
+ * @param {string} dimension The dimension ['width' | 'height'] to return.
+ * **Default**: 'width'.
+ * @returns {number} The size in pixels.
+ * 
+ */
+export function parseSize (size, dimension) {
+    if (typeof size == 'number') { return size; };
+    dimension = (dimension == undefined) ? 'width' : dimension;
+    if (dimension == 'width') { 
+        pseudoDiv.style.width = size;
+        return parseInt(window.getComputedStyle(pseudoDiv, null).getPropertyValue('width'), 10);
+    } else {
+        pseudoDiv.style.height = size;
+        return parseInt(window.getComputedStyle(pseudoDiv, null).getPropertyValue('height'), 10);
+    };
+}
+
+/**
+ * @function checkBoolean
+ * @desc Validates whether an input is boolean [true | false].
+ * @since v2.1.0
+ * @param {(any | boolean)} argument The argument to be checked.
+ * @param {string} argumentName A string representation of the calling function.
+ * @returns {boolean} True if the argument is boolean, false otherwise - logs an error to the console
+ */
+export function checkBoolean (argument, argumentName) {
+    if ([true, false].indexOf(argument) == -1) {
+        console.log(`Option setting error. ${argumentName} must be one of [true | false]`);
+        return false;
+    } else {
+        return true;
+    };
+}
+
+/**
+ * @function checkFontFamily
+ * @desc Validates whether a font family is available on the browser. Note not all
+ * browsers support the document.font interface (esp. all versions of Internet Explorer - 
+ * if you are still using IE, I'm coming to your house and setting your computer on fire).
+ * @since v2.1.0
+ * @param {string} argument The font family being checked.
+ * @returns {boolean} True if the font is available or the document.font interface is unsupported,
+ * false otherwise - logs an error to the console
+ */
+export function checkFontFamily (fontFamily) {
+    if (document.fonts == undefined) return true;  //interface undefined - probably IE
+    if (document.fonts.check(`16px ${fontFamily}`)) return true;
+    console.log(`Option setting error. ${fontFamily} is not a valid font family for this browser`);
+    return false;
+}
+
+/**
+ * @function checkCSS
+ * @desc Validates whether a CSS value is valid. It does this by setting the value in a div
+ * and the checking to see if the style has indeed changed.
+ * @since v2.1.0
+ * @param {string} variable The CSS rule (e.g., padding, border-radius, etc.) being checked.
+ * @param {string} style The style to validate.
+ * @returns {boolean} True if the CSS is valid, false otherwise - logs an error to the console
+ */
+export function checkCSS (variable, style) {
+    pseudoDiv.style[variable] = 'initial';
+    pseudoDiv.style[variable] = style;
+    if (pseudoDiv.style[variable] == 'initial') {
+        console.log(`Option setting error. ${style} is not a valid style for ${variable}`);
+        return false;
+    } else {
+        return true;
+    };
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Oct 06 2021 08:43:51 GMT-0400 (Eastern Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
