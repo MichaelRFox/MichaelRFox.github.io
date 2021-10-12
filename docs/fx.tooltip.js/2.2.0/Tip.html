@@ -1,0 +1,4794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Tip - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxToolTip.js" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Classes</h3><ul><li><a href="Tip.html">Tip</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Tip.html#content">content</a></li><li data-type='method' style='display: none;'><a href="Tip.html#orientation">orientation</a></li><li data-type='method' style='display: none;'><a href="Tip.html#preferredOrientation">preferredOrientation</a></li><li data-type='method' style='display: none;'><a href="Tip.html#autoPosition">autoPosition</a></li><li data-type='method' style='display: none;'><a href="Tip.html#autoSize">autoSize</a></li><li data-type='method' style='display: none;'><a href="Tip.html#mousePoint">mousePoint</a></li><li data-type='method' style='display: none;'><a href="Tip.html#trackMouse">trackMouse</a></li><li data-type='method' style='display: none;'><a href="Tip.html#cursor">cursor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#font">font</a></li><li data-type='method' style='display: none;'><a href="Tip.html#foregroundColor">foregroundColor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#backgroundColor">backgroundColor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#backgroundOpacity">backgroundOpacity</a></li><li data-type='method' style='display: none;'><a href="Tip.html#padding">padding</a></li><li data-type='method' style='display: none;'><a href="Tip.html#borderRadius">borderRadius</a></li><li data-type='method' style='display: none;'><a href="Tip.html#boxShadow">boxShadow</a></li><li data-type='method' style='display: none;'><a href="Tip.html#transitionVisible">transitionVisible</a></li><li data-type='method' style='display: none;'><a href="Tip.html#transitionHidden">transitionHidden</a></li><li data-type='method' style='display: none;'><a href="Tip.html#arrowSize">arrowSize</a></li><li data-type='method' style='display: none;'><a href="Tip.html#width">width</a></li><li data-type='method' style='display: none;'><a href="Tip.html#maxWidth">maxWidth</a></li><li data-type='method' style='display: none;'><a href="Tip.html#minWidth">minWidth</a></li><li data-type='method' style='display: none;'><a href="Tip.html#height">height</a></li><li data-type='method' style='display: none;'><a href="Tip.html#maxHeight">maxHeight</a></li><li data-type='method' style='display: none;'><a href="Tip.html#minHeight">minHeight</a></li><li data-type='method' style='display: none;'><a href="Tip.html#remove">remove</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-fxTip.html">fxTip</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fxTip.html#~create">create</a></li><li data-type='method' style='display: none;'><a href="module-fxTip.html#~remove">remove</a></li><li data-type='method' style='display: none;'><a href="module-fxTip.html#~checkDOM">checkDOM</a></li></ul></li><li><a href="module-index.html">index</a></li><li><a href="module-init.html">init</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-init.html#~setup">setup</a></li><li data-type='method' style='display: none;'><a href="module-init.html#~closeDown">closeDown</a></li></ul></li><li><a href="module-mouse.html">mouse</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-mouse.html#~getMouseCoordinates">getMouseCoordinates</a></li><li data-type='method' style='display: none;'><a href="module-mouse.html#~suspend">suspend</a></li></ul></li><li><a href="module-options.html">options</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-options.html#~applyOptions">applyOptions</a></li><li data-type='method' style='display: none;'><a href="module-options.html#~resetOptions">resetOptions</a></li></ul></li><li><a href="module-orient.html">orient</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-orient.html#~position">position</a></li><li data-type='method' style='display: none;'><a href="module-orient.html#~optimumOrientation">optimumOrientation</a></li><li data-type='method' style='display: none;'><a href="module-orient.html#~getOrientation">getOrientation</a></li></ul></li><li><a href="module-style.html">style</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-style.html#~getRule">getRule</a></li><li data-type='method' style='display: none;'><a href="module-style.html#~getRuleIndex">getRuleIndex</a></li></ul></li><li><a href="module-tips.html">tips</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-tips.html#~getTipByElementId">getTipByElementId</a></li><li data-type='method' style='display: none;'><a href="module-tips.html#~sizeTip">sizeTip</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utils.html#~getElementCoordinates">getElementCoordinates</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~overlap">overlap</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~hexToRgb">hexToRgb</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~createPseudoDiv">createPseudoDiv</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~parseColor">parseColor</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~parseSize">parseSize</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkSize">checkSize</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkBoolean">checkBoolean</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkFontFamily">checkFontFamily</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkCSS">checkCSS</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="module-fxTip.html#~event:detectTargetRemoval">detectTargetRemoval</a></li><li><a href="module-mouse.html#~event:mouseover">mouseover</a></li><li><a href="module-mouse.html#~event:mousemove">mousemove</a></li><li><a href="module-mouse.html#~event:mouseout">mouseout</a></li><li><a href="module-utils.html#~event:windowResized">windowResized</a></li></ul><h3>Global</h3><ul><li><a href="global.html#targetTimer">targetTimer</a></li><li><a href="global.html#sheet">sheet</a></li><li><a href="global.html#rules">rules</a></li><li><a href="global.html#ttDiv">ttDiv</a></li><li><a href="global.html#ttContainer">ttContainer</a></li><li><a href="global.html#beforeRule">beforeRule</a></li><li><a href="global.html#afterRule">afterRule</a></li><li><a href="global.html#targetRule">targetRule</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#mouseX">mouseX</a></li><li><a href="global.html#mouseY">mouseY</a></li><li><a href="global.html#tips">tips</a></li><li><a href="global.html#tipsIndex">tipsIndex</a></li><li><a href="global.html#windowWidth">windowWidth</a></li><li><a href="global.html#windowHeight">windowHeight</a></li><li><a href="global.html#aspectRatio">aspectRatio</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tip</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Tip
+        </h2>
+        
+            <div class="class-description usertext"><p>the Tip class</p></div>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="Tip"><span class="type-signature"></span>new Tip<span class="signature">(elementId, content, global)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Instantiates a new tooltip with all of the default options, and provides methods to customize each option.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>elementId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The unique id of the DOM element that will be associated with the tooltip.
+If their is no element in the DOM with this id, throws and error.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid HTML which will be displayed in the tooltip.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>global</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>If this is set to true, the changes to the returned tooltip will affect all subsequently
+instantiated tooltips. This parameter is only used internally when the globalOptions object is created.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A <a href="Tip.html">Tip</a> class object which contains a private <a href="module-options.html#~globalOptions">globalOptions</a>
+object and exposes several methods to customize those options.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="Tip.html">Tip</a></dt>
+            <dd></dd>
+        </dl>
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="content"><span class="type-signature"></span>content<span class="signature">(content)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line65">line 65</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Although the content of the tooltip is set with the <a href="module-fxTip.html#~create">create</a> method,
+you may use the content method on an <a href="Tip.html">Tip</a> object to dynamically alter
+the content of the tooltip at runtime. The content argument can be any valid HTML (text, tables, images, svg, etc.).</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">fxTootip.content() method</p>
+    
+    <pre class="prettyprint"><code>let myTooltip = fxToolTip.create('myElement', 'Loreiem Ipsum');
+.
+.
+.
+myTooltip.content('Ut enim ad minim veniam');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid HTML to displayed when the tooltip is visible. <strong>Default</strong>: ''.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the content argument is passed, the <em>content</em> method returns the <a href="Tip.html">Tip</a> object.<br>
+If the content method is called with no arguments, the content method returns the current content string.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="orientation"><span class="type-signature"></span>orientation<span class="signature">(orientation)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line85">line 85</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>You may set the location of the tooltip relative to the target element (or cursor if the <a href="Tip.html#mousePoint">mousePoint</a>
+method is called with true as the argument).  If the orientation is set, auto-positioning is disabled
+(see the <a href="Tip.html#autoPosition">autoPosition</a> method).</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.orientation() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .orientation('left');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>orientation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of ['right' | 'left' | 'top' | 'bottom']. <strong>Default</strong>: 'right'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the orientation argument is passed, the <em>orientation</em> method returns the <a href="Tip.html">Tip</a> object.
+If the <em>orientation</em> method is called with no arguments, the <em>orientation</em> method returns the current orientation setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="preferredOrientation"><span class="type-signature"></span>preferredOrientation<span class="signature">(preferredOrientation)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|boolean}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line109">line 109</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>The <em>preferredOrientation</em> method is designed to work with auto-positioning.
+If there is sufficient space to display the tooltip at the preferred orientation,
+then regardless of which position is optimum, the tooltip will be displayed at the preferred orientation.
+If there is insufficient room to display the tooltip at the preferred orientation,
+then auto-positioning takes over and displays the tooltip at the optimum position.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.preferredOrientation() method</p>
+    
+    <pre class="prettyprint"><code>let myTooltip = fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .preferredOrientation('left');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>preferredOrientation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of ['right' | 'left' | 'top' | 'bottom' | 'none']. <strong>Default</strong>: 'right'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the orientation argument is passed, the <em>preferredOrientation</em> method returns the <a href="Tip.html">Tip</a> object.
+If the <em>preferredOrientation</em> method is called with no arguments, the <em>preferredOrientation</em> method returns the current preferredOrientation setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="autoPosition"><span class="type-signature"></span>autoPosition<span class="signature">(autoPosition)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|boolean}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line134">line 134</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>If set to true, the <em>autoPosition</em> method enables auto-positioning of the tooltip.<br>
+Auto-positioning evaluates the available screen space on all four sides of the target
+element (or cursor if the <a href="Tip.html#mousePoint">mousePoint</a> method is called with true as the argument)
+and the height and width of the tooltip and positions the tooltip at the orientation with the most room.
+If the preferred orientation is not set to 'none', and that location has sufficient room to display the tooltip,
+then the preferred location is used.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.autoPosition() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .autoPosition(false);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autoPosition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of [true | false], <strong>Default</strong>: true.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the autoPosition argument is passed, the <em>autoPosition</em> method returns the
+<a href="Tip.html">Tip</a> object. If the <em>autoPosition</em> method is called with no arguments,
+the <em>autoPosition</em> method returns the current autoPosition setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="autoSize"><span class="type-signature"></span>autoSize<span class="signature">(autoSize)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|boolean}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line164">line 164</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>If set to true, the <em>autoSize</em> method enables auto-sizing of the tooltip.
+Auto-sizing evaluates the content of the tooltip and attempts to scale the width and height
+of the tooltip to conform to the aspect ratio of the document viewport.
+Auto-sizing to the document viewport aspect ratio is intended to present an appealing appearance
+and maximize the probability that the tooltip will be displayable on the screen.
+If the content includes non-text elements like tables or images, it may be necessary to set the
+minimum width of the tooltip using the <a href="Tip.html#minWidth">minWidth</a> method or the
+minimum height using the <a href="Tip.html#minHeight">minHeight</a> method.
+<em>Note</em>: auto-sizing does not actually set the tooltip height.  It sets the width, so that when
+the tooltip div element auto-scales the height for overflow, the desired aspect ratio is achieved.
+If autoSize is set to true, both the <a href="Tip.html#width">width</a> and
+<a href="Tip.html#height">height</a> options are set to 'auto'.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.autoSize() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .autoSize(false);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autoSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of [true | false]. <strong>Default</strong>: true.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the autoSize argument is passed, the <em>autoSize</em> method returns the
+<a href="Tip.html">Tip</a> object.  If the <em>autoSize</em> method is called with no arguments,
+the <em>autoSize</em> method returns the current autoSize setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="mousePoint"><span class="type-signature"></span>mousePoint<span class="signature">(mousePoint)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|boolean}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line191">line 191</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>If set to true, the <em>mousePoint</em> method causes the tooltip to be displayed relative to the cursor position
+instead of the target element.  If set to false the tooltip will be displayed relative to the target element.
+In this case, the tooltip will attempt to center relative to one of the four sides of the target element
+(depending on the auto-position setting).  If, due to document viewport limitations, the tooltip can't center itself,
+it will adjust the tooltip left, right, up, or down as appropriate, but offset the tooltip pointer to keep
+it centered on the element.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.mousePoint() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .mousePoint(true);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mousePoint</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of [true | false]. <strong>Default</strong>: false.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the mousePoint argument is passed, the <em>mousePoint</em> method returns the
+<a href="Tip.html">Tip</a> object. If the <em>mousePoint</em> method is called with no arguments,
+the <em>mousePoint</em> method returns the current mousePoint setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="trackMouse"><span class="type-signature"></span>trackMouse<span class="signature">(mousePoint)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|boolean}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line213">line 213</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>If set to true, the <em>trackMouse</em> method causes the tooltip to follow the cursor as it moves over the target element.
+If auto-positioning is set to true, the tooltip will continue to adjust it orientation to ensure that it can be displayed
+within the document viewport.  The tooltip will also continuously offset the tooltip pointer, as required, to keep it
+centered relative to the cursor. When true is passed to the <em>trackMouse</em> method, the <a href="Tip.html#mousePoint">mousePoint</a>
+option to will automatically be set to true as well.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.trackMouse() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .trackMouse(true);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mousePoint</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of [true | false]. <strong>Default</strong>: false.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the trackMouse argument is passed, the <em>trackMouse</em> method returns the
+<a href="Tip.html">Tip</a> object. If the <em>trackMouse</em> method is called with no arguments,
+the <em>trackMouse</em> method returns the current trackMouse setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="cursor"><span class="type-signature"></span>cursor<span class="signature">(cursor)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line236">line 236</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>The <em>cursor</em> method allows programmatic control of the cursor appearance as the mouse hovers over the target element.
+Note that not all defined cursor types are available in all browsers.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.cursor() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .cursor('pointer');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cursor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of ['auto' | 'default' | 'none' | 'context-menu' | 'help' | 'pointer' | 'progress' | 'wait' | 'cell' |
+'crosshair' | 'text' | 'vertical-text' | 'alias' | 'copy' | 'move' | 'no-drop' | 'not-allowed' | 'e-resize' | 'n-resize' |
+'ne-resize' | 'nw-resize' | 's-resize' | 'se-resize' | 'sw-resize' | 'w-resize' | 'ew-resize' | 'ns-resize' | 'nesw-resize' |
+'nwse-resize' | 'col-resize' | 'row-resize' | 'all-scroll' | 'zoom-in' | 'zoom-out' | 'grab' | 'grabbing']. <strong>Default</strong>: 'help'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the cursor argument is passed, the <em>cursor</em> method returns the
+<a href="Tip.html">Tip</a> object.  If the <em>cursor</em> method is called with no arguments, the <em>cursor</em>
+method returns the current cursor setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="font"><span class="type-signature"></span>font<span class="signature">(family, size)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line278">line 278</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the font family and size via the <em>font</em> method, sets the font-family and font-size options contained within the
+which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the
+target element. These options set defaults for text within the tooltip, but can be customized through inline or css selector styles,
+contained in the content that is passed to the create method.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.font() method</p>
+    
+    <pre class="prettyprint"><code>&lt;style>
+     H1 {
+         .font-size: 1.25em;
+         .font-weight: bold;
+     }
+     .myClass {
+         .font-style: italic;
+     }
+&lt;/style>
+&lt;body>
+     &lt;script type = 'text/javascript' src='fxToolTip.js'>&lt;/script>
+     
+     &lt;p id='myElement'>This is the target element&lt;/p>
+     
+     &lt;script>
+         let content = '&lt;H1>Lorem ipsum&lt;/H1>&lt;p>Ut enim ad minim veniam, &lt;span class='myClass'>quis nostrud&lt;/span> exercitation&lt;/p>';
+         let myTooltip = fxToolTip.create('myElement', content)
+             .font('verdana, sans-serf', '12px')
+     &lt;/script>
+&lt;/body></code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>family</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS font-family (e.g., 'tahoma, sans-serif'). <strong>Default</strong>: 'verdana, sans-serif'.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS font-size (e.g., '1em' | '16px').  If a number is passed, it is assumed to be in pixels. Default: 16.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the family and size arguments are passed, the <em>font</em> method returns the <a href="Tip.html">Tip</a> object}.
+If the <em>font</em> method is called with no arguments, the <em>font</em> method returns the current
+font setting as an object (e.g., {family:'tahoma, sans-serf', size:16}).</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="foregroundColor"><span class="type-signature"></span>foregroundColor<span class="signature">(foregroundColor)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line302">line 302</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the tooltip foregroundColor via the <em>foregroundColor</em> method, sets the foregroundColor option contained within the
+<a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the
+target element. The forgroundColor option sets defaults for text color within the tooltip, but can be customized through
+inline or CSS selector styles.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.foregroundColor() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .foregroundColor('rgb(20, 40,128)');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>foregroundColor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS color such as hex, rgb, or a named CSS color. <strong>Default</strong>: 'white'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the color argument is passed, the <em>foregroundColor</em> method returns the
+<a href="Tip.html">Tip</a> object. If the <em>foregroundColor</em> method is called with no arguments,
+the <em>foregroundColor</em> method returns the current foregroundColor setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="backgroundColor"><span class="type-signature"></span>backgroundColor<span class="signature">(backgroundColor)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line322">line 322</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the tooltip backgroundColor via the <em>backgroundColor</em> method, sets the backgroundColor option contained within the
+<a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the
+target element. The backgroundColor option sets the background color of the tooltip.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.backgroundColor() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     backgroundColor('rgb(20, 40,128)');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>backgroundColor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS color such as hex, rgb, or a named CSS color. <strong>Default</strong>: '#333333'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the backgroundColor argument is passed, the <em>backgroundColor</em> method returns the
+<a href="Tip.html">Tip</a> object.  If the <em>backgroundColor</em> method is called with no arguments,
+the <em>backgroundColor</em> method returns the current backgroundColor setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="backgroundOpacity"><span class="type-signature"></span>backgroundOpacity<span class="signature">(backgroundOpacity)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line342">line 342</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the tooltip backgroundOpacity via the <em>backgroundOpacity</em> method, sets the backgroundOpacity option contained within the
+<a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target
+element. The backgroundOpacity option sets the background opacity of the tooltip.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.backgroundOpacity() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     backgroundOpacity(0.5);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>backgroundOpacity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A value [0...1]. <strong>Default</strong>: 1.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the backgroundOpacity argument is passed, the <em>backgroundOpacity</em> method returns the
+<a href="Tip.html">Tip</a> object.  If the <em>backgroundOpacity</em> method is called with no arguments,
+the <em>backgroundOpacity</em> method returns the current backgroundOpacity setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="padding"><span class="type-signature"></span>padding<span class="signature">(padding)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line367">line 367</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the tooltip padding via the <em>padding</em> method, sets the padding option contained within the
+<a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover
+over the target element. The padding option establishes the padding for the tooltip.  If the padding argument contains
+only one measurement, uniform padding is applied to all sides of the tooltip.  If the padding argument contains two measurements,
+the first measure is applied to the top and bottom, and the second to the left and right. If the padding argument contains
+three measurements, the first is applied to the top, the second to the left and right, and the third to the bottom.
+If the padding argument contains four measurements, they are applied to the top, left, bottom, right respectively.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.padding() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .padding('2em 5px 1em 5px');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>padding</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string representing 1 to 4 valid CSS sizes (e.g., '1em' | '16px') <strong>except for percentage</strong>.
+If no unit of measurement is given it is assumed to be in pixels. <strong>Default</strong>: '5px 10px'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the padding argument is passed, the <em>padding</em> method returns the <a href="Tip.html">Tip</a> object.
+If the <em>padding</em> method is called with no arguments, the <em>padding</em> method returns the current padding setting formatted
+as a single CSS shorthand string (e.g. '5px 10px').</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="borderRadius"><span class="type-signature"></span>borderRadius<span class="signature">(borderRadius)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line428">line 428</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the borderRadius via the <em>borderRadius</em> method, sets the borderRadius option contained within the
+<a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon
+hover over the target element. The borderRadius option sets a uniform borderRadius for the tooltip corners.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.borderRadius() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .borderRadius('1em');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>borderRadius</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').
+If a number is passed, it is assumed to be in pixels. <strong>Default</strong>: 12.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the borderRadius argument is passed, the <em>borderRadius</em> method returns the
+<a href="Tip.html">Tip</a> object. If the <em>borderRadius</em> method is called with no arguments,
+the <em>borderRadius</em> method returns the current borderRadius setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="boxShadow"><span class="type-signature"></span>boxShadow<span class="signature">(size, color, opacity)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line454">line 454</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>check input parameters</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the boxShadow size, color, and opacity via the <em>boxShadow</em> method, sets the boxShadow option contained within the
+<a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the
+target element. The boxShadow option sets a box shadow offsets to the lower right of the tooltip.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.boxShadow() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .boxShadow('1em', '#0000FF', 0.5); </code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px') <strong>except percentage</strong>, or 'none'.
+If a number is passed, it is assumed to be in pixels.  If 'none' is passed as a single argument, no boxShadow is shown. <strong>Default</strong>: 8px'.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>color</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS color such as hex, rgb, or a named CSS color. <strong>Default</strong>: 'rgb(0,0,0)'.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opacity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A number [0...1]. <strong>Default</strong>:  0.5.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If arguments are passed, the <em>boxShadow</em> method returns the <a href="Tip.html">Tip</a> object.
+If the <em>boxShadow</em> method is called with no arguments, the <em>boxShadow</em> method returns the current boxShadow setting as a CSS box-shadow
+shorthand string (e.g. '8px 8px 8px 0 rgba(0,0,0,0.5)').</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="transitionVisible"><span class="type-signature"></span>transitionVisible<span class="signature">(delay, duration)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line497">line 497</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the transitionVisible delay and duration via the <em>transitionVisible</em> method, sets the transitionVisible option contained
+within the <a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over
+the target element. The transitionVisible option sets the transition effect upon hover over the target element.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.transitionVisible() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .transitionVisible(0, 0.6);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>delay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid number in seconds. <strong>Default</strong>: 0.4.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>duration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid number in seconds. <strong>Default</strong>: 0.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If arguments are passed, the <em>transitionVisible</em> method returns the <a href="Tip.html">Tip</a> object).
+If the <em>transitionVisible</em> method is called with no arguments, the <em>transitionVisible</em> method returns the current transitionVisible
+setting as a CSS transition shorthand string (e.g. 'opacity 0.4s 0s').</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="transitionHidden"><span class="type-signature"></span>transitionHidden<span class="signature">(delay, duration)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line521">line 521</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the transitionHidden delay and duration via the <em>transitionHidden</em> method, sets the transitionHidden option contained within the
+<a href="Tip.html">Tip</a> object which is injected into the <em>.fxToolTip</em> style's ruleset upon target element mouseout.
+The transitionHidden option sets the transition effect upon target element mouseout.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.transitionHidden() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum';
+     .transitionHidden(0, 0.2);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>delay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid number in seconds. <strong>Default</strong>: 0.4.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>duration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid number in seconds. <strong>Default</strong>: 0.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If arguments are passed, the <em>transitionHidden</em> method returns the <a href="Tip.html">Tip</a> object.
+If the <em>transitionHidden</em> method is called with no arguments, the <em>transitionHidden</em> method returns the current transitionHidden setting
+as a CSS transition shorthand string (e.g. 'opacity 0.4s 0s').</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="arrowSize"><span class="type-signature"></span>arrowSize<span class="signature">(arrowSize)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line542">line 542</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the arrowSize via the <em>arrowSize</em> method, sets the arrowSize option contained within the <a href="Tip.html">Tip</a> object
+which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target element. The arrowSize option sets the size of the tooltip's arrow.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.arrowSize() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .arrowSize('1.2em');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arrowSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').  If a number is passed, it is assumed to be in pixels. <strong>Default</strong>: 12.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the arrowSize argument is passed, the <em>arrowSize</em> method returns the <a href="Tip.html">Tip</a> object).
+If the <em>arrowSize</em> method is called with no arguments, the <em>arrowSize</em> method returns the current arrowSize setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="width"><span class="type-signature"></span>width<span class="signature">(width)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line567">line 567</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the width via the <em>width</em> method, sets the width option contained within the  <a href="Tip.html">Tip</a>
+object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target element. When the width
+option is set to any value other than auto, auto-sizing is disabled. However, if the <a href="Tip.html#autoSize">autoSize</a>
+method is subsequently set to true, the width setting will be ignored. If the <em>width</em> is an absolute value
+(e.g., '200px' | '30em'), it will remain constant if the screen size changes. In this case, it may be more appropriate
+to use a realtive measure such as percentage</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.width() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .width('500px');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').  If a number is passed, it is assumed
+to be in pixels. <strong>Default</strong>: 'auto'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the width argument is passed, the <em>width</em> method returns the <a href="Tip.html">Tip</a>
+object.  If the <em>width</em> method is called with no arguments, the <em>width</em> method returns the current width setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="maxWidth"><span class="type-signature"></span>maxWidth<span class="signature">(maxWidth)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line592">line 592</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the maximum width via the <em>maxWidth</em> method, sets the maxWidth option contained within the <a href="Tip.html">Tip</a>
+object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target element.
+The maxWidth option sets the maximum width of the tooltip upon hover over the target element.
+The <em>maxWidth</em> method is useful to ensure that tooltips don't grow too large when using <a href="Tip.html#autoSize">auto-sizing</a>
+or when their content is very large and may overflow smaller screens.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.maxWidth() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .maxWidth('100px');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').  If a number is passed, it is assumed to be in pixels.
+<strong>default</strong>: 'none'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the maxWidth argument is passed, the <em>maxWidth</em> method returns the <a href="Tip.html">Tip</a>
+object.  If the <em>maxWidth</em> method is called with no arguments, the <em>maxWidth</em> method returns the current maxWidth setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="minWidth"><span class="type-signature"></span>minWidth<span class="signature">(minWidth)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line615">line 615</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the minimum width via the <em>minWidth</em> method, sets the minWidth option contained within the <a href="Tip.html">Tip</a>
+object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target element. The minWidth option sets the
+minimum width of the tooltip upon hover over the target element.  The <em>minWidth</em> method is useful to ensure that non-text content
+elements such as tables are correctly displayed in the tooltip when using <a href="Tip.html#autoSize">auto-sizing</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.minWidth() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .minWidth('100px');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>minWidth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').  If a number is passed, it is assumed to be in pixels.
+<strong>Default</strong>: 0.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the minWidth argument is passed, the <em>minWidth</em> method returns the <a href="Tip.html">Tip</a>
+object. If the <em>minWidth</em> method is called with no arguments, the <em>minWidth</em> method returns the current minWidth setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="height"><span class="type-signature"></span>height<span class="signature">(height)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line638">line 638</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the height via the <em>height</em> method, sets the height option contained within the <a href="Tip.html">Tip</a>
+object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target element. When the height option
+is set to any value other than auto, <a href="Tip.html#autoSize">auto-sizing</a> is disabled. However, if the
+<a href="Tip.html#autoSize">autoSize</a> method is subsequently set to true, the height setting will be ignored.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.height() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .height('500px');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').  If a number is passed, it is assumed to be in pixels.
+<strong>Default</strong>: 'auto'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the height argument is passed, the <em>height</em> method returns the <a href="Tip.html">Tip</a>
+object.  If the <em>height</em> method is called with no arguments, the <em>height</em> method returns the current height setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="maxHeight"><span class="type-signature"></span>maxHeight<span class="signature">(maxHeight)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line662">line 662</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the maximum height via the <em>maxHeight</em> method, sets the maxHeight option contained within the <a href="Tip.html">Tip</a>
+object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target element. The <em>maxHeight</em> method is useful
+to ensure that tooltips don't grow too large when using <a href="Tip.html#autoSize">auto-sizing</a> or when their content is very large
+and may overflow smaller screens.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.maxHeight() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .maxHeight('500px');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxHeight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').  If a number is passed, it is assumed to be in pixels.
+<strong>Default</strong>: 'none'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>if the maxHeight argument is passed, the <em>maxHeight</em> method returns the <a href="Tip.html">Tip</a>
+object.  If the <em>maxHeight</em> method is called with no arguments, the <em>maxHeight</em> method returns the current maxHeight setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="minHeight"><span class="type-signature"></span>minHeight<span class="signature">(minHeight)</span><span class="type-signature"> &rarr; {<a href="Tip.html">Tip</a>|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line685">line 685</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Setting the minimum height via the <em>minHeight</em> method, sets the minHeight option contained within the <a href="Tip.html">Tip</a>
+object which is injected into the <em>.fxToolTip</em> style's ruleset upon hover over the target element. The <em>minHeight</em> method is
+useful to ensure that non-text content elements such as tables are correctly displayed in the tooltip when using
+<a href="Tip.html#autoSize">auto-sizing</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.minHeight() method</p>
+    
+    <pre class="prettyprint"><code>fxToolTip.create('myElement', 'Loreiem Ipsum')
+     .minHeight('100px');</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>minHeight</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any valid CSS size (e.g., '1em' | '16px').  If a number is passed, it is assumed to be in pixels.
+<strong>Default</strong>: 0.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the minHeight argument is passed, the <em>minHeight</em> method returns the <a href="Tip.html">Tip</a>
+object.  If the <em>minHeight</em> method is called with no arguments, the <em>minHeight</em> method returns the current minHeight setting.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tip.html">Tip</a></span>
+|
+
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="remove"><span class="type-signature"></span>remove<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tip.js.html">Tip.js</a>, <a href="Tip.js.html#line709">line 709</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Similar to the <a href="module-fxTip.html#~remove">global remove</a> method, the <em>remove</em> method of a <a href="Tip.html">Tip</a> object
+removes all of the event listeners and the associated <a href="Tip.html">Tip</a> object object from the stack.
+If this is the only <a href="Tip.html">Tip</a> object on the stack, the <em>remove</em> method will remove all of the <em>.fxTooltip</em>
+CSS rules from the stylesheet and set the library back to its un-instantiated state.  Generally, this method is not required,
+since fxToolTip automatically detects the removal of target elements,
+and performs corresponding tooltip removal automatically.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+        <p class="code-caption">Tip.remove() method</p>
+    
+    <pre class="prettyprint"><code>let myToolTip = fxToolTip.create('myElement', 'Loreiem Ipsum');
+.
+.
+.
+myToolTip.remove();</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Tue Oct 12 2021 13:46:28 GMT-0400 (Eastern Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
