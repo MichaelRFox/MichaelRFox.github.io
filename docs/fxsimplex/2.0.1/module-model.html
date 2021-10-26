@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>model - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxSimplex" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Modules</h3><ul><li><a href="module-matrix.html">matrix</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-matrix.html#~getRow">getRow</a></li><li data-type='method' style='display: none;'><a href="module-matrix.html#~getColumn">getColumn</a></li></ul></li><li><a href="module-model.html">model</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-model.html#~parseModel">parseModel</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~parseEquation">parseEquation</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~buildTableau">buildTableau</a></li></ul></li><li><a href="module-phaseTwo.html">phaseTwo</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~buildPhaseTwoTableau">buildPhaseTwoTableau</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~reBaseModel">reBaseModel</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~cleanPhaseTwoTableau">cleanPhaseTwoTableau</a></li></ul></li><li><a href="module-pivot.html">pivot</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pivot.html#~getPivot">getPivot</a></li><li data-type='method' style='display: none;'><a href="module-pivot.html#~pivotModel">pivotModel</a></li></ul></li><li><a href="module-simplex.html">simplex</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-simplex.html#~buildSolution">buildSolution</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~executeSimplex">executeSimplex</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~simplex">simplex</a></li></ul></li><li><a href="module-utilities.html">utilities</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utilities.html#~trim">trim</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testVariable">testVariable</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testRegex">testRegex</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~multipleSolutionTest">multipleSolutionTest</a></li></ul></li><li><a href="module-variables.html">variables</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-variables.html#~getVariables">getVariables</a></li><li data-type='method' style='display: none;'><a href="module-variables.html#~swapVariables">swapVariables</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">model</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext"><p>Provides functions to parse the input objective and constraints and build a tableau for processing.</p></div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~parseModel"><span class="type-signature">(inner) </span>parseModel<span class="signature">(objective, constraints)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line8">line 8</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Parses the objective function and the array of constraints into a tableau suitable for processing.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>objective</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The objective function in the form of  <em>'Maximize Z = 1x + 5y'</em>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>constraints</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A two-dimensional array of strings detailing the constraints in the form
+of <em>['x + y &lt;= 4', '2x - y &lt;= 7', ...]</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>An array containing the model in the form of a tableau (an n x m array of coefficients),
+the variable names (an array of strings), and the type (string) ['max' | 'min'].</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~parseEquation"><span class="type-signature">(inner) </span>parseEquation<span class="signature">(equation)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line56">line 56</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Parses each constraint equation separably into their coefficients and variables.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>equation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An individual constraint equation in the form of <code>'x + y &lt;= 4'</code>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>An array consisting of two arrays: an array of coefficients (strings)
+and an array of variables (strings).</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~buildTableau"><span class="type-signature">(inner) </span>buildTableau<span class="signature">(variables, coefficients, constraints, equalities, objectiveVariable, type)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model.js.html">model.js</a>, <a href="model.js.html#line86">line 86</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Builds a tableau suitable for executing the simplex method.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>variables</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array of strings representing the variables (eg., ['x1, 'y1', ...]).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>coefficients</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A two-dimensional array of numbers representing the coefficients
+of the variables on the left hand side of the constraint equations and the right hand
+side of the objective function (e.g., [[3, 4.5, 7, ...], [1, 17, 8, ...], [12, 11, 2.2, ...]]).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>constraints</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array of numbers representing the constraint values on the right
+hand side of the constraint equation (e.g., [8, 2.1, 45, ...]).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>equalities</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array of strings representing the constraint operators (e.g.,
+['=', '&lt;=', '&gt;=', ...]).</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>objectiveVariable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string representing the objective variable name for the
+left hand side of the objective function.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The type of optimization ['min' | 'max'].</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A two-dimensional array containing the simplex tableau (a two-dimensional array
+of numbers) and the model variables. For a model with a &lt;= type a positive <em>slack</em> variable is
+added. For a &gt;= type a negative <em>extra</em> and positive <em>artificial</em> variables are added. For an =
+type model a positive <em>artificial</em> variable is added.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Tue Oct 26 2021 10:08:46 GMT-0400 (Eastern Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
