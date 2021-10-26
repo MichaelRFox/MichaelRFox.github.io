@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>utilities.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxSimplex" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Modules</h3><ul><li><a href="module-matrix.html">matrix</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-matrix.html#~getRow">getRow</a></li><li data-type='method' style='display: none;'><a href="module-matrix.html#~getColumn">getColumn</a></li></ul></li><li><a href="module-model.html">model</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-model.html#~parseModel">parseModel</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~parseEquation">parseEquation</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~buildTableau">buildTableau</a></li></ul></li><li><a href="module-phaseTwo.html">phaseTwo</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~buildPhaseTwoTableau">buildPhaseTwoTableau</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~reBaseModel">reBaseModel</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~cleanPhaseTwoTableau">cleanPhaseTwoTableau</a></li></ul></li><li><a href="module-pivot.html">pivot</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pivot.html#~getPivot">getPivot</a></li><li data-type='method' style='display: none;'><a href="module-pivot.html#~pivotModel">pivotModel</a></li></ul></li><li><a href="module-simplex.html">simplex</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-simplex.html#~buildSolution">buildSolution</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~executeSimplex">executeSimplex</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~simplex">simplex</a></li></ul></li><li><a href="module-utilities.html">utilities</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utilities.html#~trim">trim</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testVariable">testVariable</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testRegex">testRegex</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~multipleSolutionTest">multipleSolutionTest</a></li></ul></li><li><a href="module-variables.html">variables</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-variables.html#~getVariables">getVariables</a></li><li data-type='method' style='display: none;'><a href="module-variables.html#~swapVariables">swapVariables</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">utilities.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module utilities
+ * @desc The utilities module provides various helper functions for the fxSimplex library.
+ */
+import {getColumn} from './matrix';
+
+/**
+ * @function trim
+ * @desc Helps to avoid floating point errors.
+ * @param {number} x The number to trim.
+ * @param {number} precision The number of digits to return - optional. **Default**: 7.
+ * @returns {number} The trimmed number.
+ */
+export function trim (x, precision = 7) {
+    return parseFloat(x.toFixed(precision));
+}
+
+/**
+ * @function testVariable
+ * @desc Tests a variable against an array of prefixes to determine if the variable starts with the prefix.
+ * @param {string} variable A variable in the form of x1 y2, z3, etc.
+ * @param {Array} prefixes An array (of strings) of prefixes (e.g., ['a','e'] ) against which to see if the variable matches.
+ * @returns {boolean} Whether the variable matches one of the supplied prefixes.
+ */
+export function testVariable (variable, prefixes) {
+    let regex = new RegExp(`[${prefixes.join('')}]\\d+`, 'i');
+    return variable.match(regex) != null;
+}
+
+/**
+ * @function testRegex
+ * @desc Tests the result of a regex match to ensure that the input is of the proper formatting
+ * and that no reserved variables (e.g., s1, e1, a1) have been used.
+ * @param {string} input The original string matched by the regex.
+ * @param {string} testRegex The regex to test for matches - if this returns null the statement
+ * is improperly formatted.
+ * @param {string} type The type of input ['constraint' | 'objective'].
+ * @result {boolean} Returns true if the regex match is not null (complete match), and none of
+ * the reserved variables are used. False otherwise - logs an error to the console.
+ * @since v2.0.0
+ */
+export function testRegex (input, testRegex, type) {
+    
+    const regex = /\b(?:\d*\.*\d*)([a|e|s]{1}\d*)\b/g;
+    const badVariables = Array.from(input.matchAll(regex), d => d[1]).join(', ');
+    const match = input.match(testRegex);
+    if (match != null &amp;&amp; badVariables == '') return true;
+
+    if (match == null) console.error(`The ${type} ${input} is not in the proper format for an ${type} statement.`);
+    if (badVariables != '') console.error(`The following variable(s) are reserved: ${badVariables}.`);
+
+    return false;
+}
+
+/**
+ * @function multipleSolutionTest
+ * @desc Tests whether the computed model has multiple solutions
+ * @param {Array} model The simplex tableau.
+ * @param {Array} variables An array of variable names (strings) corresponding to the tableau.
+ * @param {Array} basicVariables An array of variable names (strings) of those variables
+ * corresponding to the basis.
+ * @param {Array} nonBasicVariables An array of variable names (strings) of those variables
+ * corresponding to those not in the basis.
+ * @returns {boolean} Returns true if the there are multiple solutions, false otherwise.
+ */
+export function multipleSolutionTest(model, variables, basicVariables, nonBasicVariables) {
+
+    let primaryNonBasicVariables = nonBasicVariables.reduce((a, b) => {
+        return testVariable(b, ['s', 'e', 'a']) == false ? 
+        a.concat(variables.indexOf(b)) : a;
+    }, []);
+
+    if (primaryNonBasicVariables.length == 0) return false;
+
+    let pivotColumns = [];
+
+    primaryNonBasicVariables.forEach (index => {
+        let column = getColumn(model, index);
+        if (trim(column.slice(-1)[0]) == 0 &amp; column.some(d => trim(d) > 0)) {
+            pivotColumns.push(index);
+        };
+    });
+   
+    return pivotColumns.length > 0 ?true : false;
+
+};</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Tue Oct 26 2021 09:58:21 GMT-0400 (Eastern Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

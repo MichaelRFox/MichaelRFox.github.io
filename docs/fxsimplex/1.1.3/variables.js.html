@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>variables.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxSimplex" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Modules</h3><ul><li><a href="module-matrix.html">matrix</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-matrix.html#~getRow">getRow</a></li><li data-type='method' style='display: none;'><a href="module-matrix.html#~getColumn">getColumn</a></li></ul></li><li><a href="module-model.html">model</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-model.html#~parseModel">parseModel</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~parseEquation">parseEquation</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~buildTableau">buildTableau</a></li></ul></li><li><a href="module-phaseTwo.html">phaseTwo</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~buildPhaseTwoTableau">buildPhaseTwoTableau</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~reBaseModel">reBaseModel</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~cleanPhaseTwoTableau">cleanPhaseTwoTableau</a></li></ul></li><li><a href="module-pivot.html">pivot</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pivot.html#~getPivot">getPivot</a></li><li data-type='method' style='display: none;'><a href="module-pivot.html#~pivotModel">pivotModel</a></li></ul></li><li><a href="module-simplex.html">simplex</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-simplex.html#~buildSolution">buildSolution</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~executeSimplex">executeSimplex</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~simplex">simplex</a></li></ul></li><li><a href="module-utilities.html">utilities</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utilities.html#~trim">trim</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testVariable">testVariable</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testRegex">testRegex</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~multipleSolutionTest">multipleSolutionTest</a></li></ul></li><li><a href="module-variables.html">variables</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-variables.html#~getVariables">getVariables</a></li><li data-type='method' style='display: none;'><a href="module-variables.html#~swapVariables">swapVariables</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">variables.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module variables
+ * @desc Provides utilities to extract basing and non-basic variables from
+ * the model and to swap variables in and out of the basis.
+ */
+
+import {testVariable} from './utilities';
+
+/**
+ * @function getVariables
+ * @desc Parses out the basic and non-basic variables from the simplex tableau.
+ * @param {Array} model A two-dimensional array of numbers representing the
+ * current simplex tableau
+ * @param {Array} variables An array of strings representing the variables of the tableau.
+ * @returns {Object} An object with and array (strings) of the basic variables and an
+ * array (strings) of the non-basic variables.
+ */
+export function getVariables (model, variables) {
+
+    const prefixCodes = ['s', 'a']; /** slack and artificial variables */
+
+    const basicVariableCount = variables.reduce((a, b) => { /** get the number of artificial variables in the basis */
+        return testVariable(b, prefixCodes) ? ++a : a}, 0);
+
+    const lastRow = model.length - 1;
+    let zPrefix = variables[variables.length - 1];
+    let basicVariables = new Array(basicVariableCount);
+    let nonBasicVariables = [];
+
+    model.forEach ((row, index) => {
+        row.forEach ((item, column) => {
+            let isValidColumn = testVariable(variables[column], prefixCodes);
+            let isZcolumn = variables[column] == zPrefix &amp;&amp; index == lastRow;
+            if ((item == 1 &amp;&amp; isValidColumn) || isZcolumn) {
+                basicVariables[index] = variables[column];
+            }; 
+        });
+    });
+
+    variables.forEach (variable => {
+        if (basicVariables.indexOf(variable) == -1) nonBasicVariables.push(variable);
+    });
+
+    return {basicVariables: basicVariables, nonBasicVariables: nonBasicVariables};
+}
+
+/**
+ * @function swapVariables
+ * @desc Swaps the basic variable indicated by the pivot row out of the basis with the non-basic
+ * variable indicted by the pivot column into the basis.
+ * @param {Object} pivot Key value pairs holding the current pivot row and column indices.
+ * @param {Array} variables An array of strings representing all of the variables in the tableau.
+ * @param {Array} basicVariables An array of strings representing all of the basic variables in the tableau.
+ * @param {Array} nonBasicVariables An array of strings representing all of the non-basic variables in the tableau.
+ * @returns {Object} Key-value pairs of the basic and non-basic variables (arrays of strings) after swapping.
+ */
+export function swapVariables (pivot, variables, basicVariables, nonBasicVariables) {
+
+    let tmpVariable = basicVariables[pivot.row];
+    basicVariables[pivot.row] = variables[pivot.column];
+    nonBasicVariables[nonBasicVariables.indexOf(variables[pivot.column])] = tmpVariable;
+
+    return {basicVariables: basicVariables, nonBasicVariables: nonBasicVariables};
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Tue Oct 26 2021 09:11:09 GMT-0400 (Eastern Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

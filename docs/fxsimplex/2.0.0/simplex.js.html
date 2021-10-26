@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>simplex.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxSimplex" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Modules</h3><ul><li><a href="module-matrix.html">matrix</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-matrix.html#~getRow">getRow</a></li><li data-type='method' style='display: none;'><a href="module-matrix.html#~getColumn">getColumn</a></li></ul></li><li><a href="module-model.html">model</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-model.html#~parseModel">parseModel</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~parseEquation">parseEquation</a></li><li data-type='method' style='display: none;'><a href="module-model.html#~buildTableau">buildTableau</a></li></ul></li><li><a href="module-phaseTwo.html">phaseTwo</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~buildPhaseTwoTableau">buildPhaseTwoTableau</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~reBaseModel">reBaseModel</a></li><li data-type='method' style='display: none;'><a href="module-phaseTwo.html#~cleanPhaseTwoTableau">cleanPhaseTwoTableau</a></li></ul></li><li><a href="module-pivot.html">pivot</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pivot.html#~getPivot">getPivot</a></li><li data-type='method' style='display: none;'><a href="module-pivot.html#~pivotModel">pivotModel</a></li></ul></li><li><a href="module-simplex.html">simplex</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-simplex.html#~buildSolution">buildSolution</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~executeSimplex">executeSimplex</a></li><li data-type='method' style='display: none;'><a href="module-simplex.html#~simplex">simplex</a></li></ul></li><li><a href="module-utilities.html">utilities</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utilities.html#~trim">trim</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testVariable">testVariable</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~testRegex">testRegex</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~multipleSolutionTest">multipleSolutionTest</a></li></ul></li><li><a href="module-variables.html">variables</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-variables.html#~getVariables">getVariables</a></li><li data-type='method' style='display: none;'><a href="module-variables.html#~swapVariables">swapVariables</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">simplex.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module simplex
+ * @desc The simplex module provides the entry point for fxSimplex. 
+ */
+
+import {trim, testVariable} from './utilities';
+import {parseModel} from './model';
+import {getPivot, pivotModel} from './pivot';
+import {buildPhaseTwoTableau, cleanPhaseTwoTableau} from './phaseTwo';
+import {getVariables, swapVariables} from './variables';
+
+/**
+ * @function buildSolution
+ * @desc Formats the final solution for return back to the [simplex function]{@link module:simplex~simplex}.
+ * @param {Array} model A two-dimensional array of numbers representing the
+ * current simplex tableau.
+ * @param {Array} basicVariables An array of strings representing the basic variables of the tableau.
+ * @param {Array} nonBasicVariables An array of strings representing the non-basic variables of the tableau.
+ * @param {string} result The result of the final tableau pivot. One of ['solved', 'multiple solutions', 'unbounded']
+ * @returns {Object} Key-value pairs representing the solution (a two-dimensional array of variable (string)
+ * and coefficient (number) pairs), and the result (string).
+ */
+function buildSolution (model, basicVariables, nonBasicVariables, result) {
+
+    let solution = [];
+    let lastColumn = model[0].length - 1;
+
+    for (let i = 0; i &lt; basicVariables.length; i++) {
+        solution.push ([basicVariables[i], trim(model[i][lastColumn])]);
+    };
+
+    return {solution: solution, result: result};
+
+}
+
+/**
+ * @function executeSimplex
+ * @desc Iteratively executes the simplex method for either one-phase or two-phase models until a solution
+ * is found or the model is determined to be unbounded.
+ * @param {Array} model A two-dimensional array of numbers representing the
+ * current simplex tableau.
+ * @param {Array} basicVariables An array of strings representing the basic variables of the tableau.
+ * @param {Array} nonBasicVariables An array of strings representing the non-basic variables of the tableau.
+ * @param {string} type The type of optimization ['min' | 'max'].
+ * @returns {Array} An array containing the final tableau (two-dimensional array of numbers) and and object
+ * containing key-value pairs representing the final pivot row and column indices. 
+ */
+function executeSimplex (model, variables, basicVariables, nonBasicVariables, type) {
+
+    let pivot;
+
+    while (true) {
+        pivot = getPivot(model, variables, basicVariables, nonBasicVariables, type);
+        switch (pivot) {
+            case 'solved':
+            case 'multiple solutions':
+            case 'unbounded':
+                return [model, pivot];
+        };
+        model = pivotModel(model, pivot, type);
+
+        ({basicVariables, nonBasicVariables} = swapVariables(pivot, variables, basicVariables, nonBasicVariables));
+    };
+};
+
+/**
+ * @function simplex
+ * @desc The simplex function is the entry point for fxSimplex and is the only object exposed by the library.
+ * @param {string} objective The objective function in the form of  *'Maximize Z = 1x + 5y'*.
+ * @parm {Array} constraints A two-dimensional array of strings detailing the constraints
+ * in the form of *['x + y &lt;= 4', '2x - y &lt;= 7', ...]*.
+ * @returns {Object} An object with the solution (an array of key value pairs for the basic variables and their
+ * coefficients in the form of *[['y', 10],['x', 10], ['Z', 20],...]*) and a result: a string in the form of
+ * *['solved' | 'infeasible' | 'unbounded' | 'multiple solutions']*. If the optimization is successful, the result
+ * will be either *solved* or *multiple solutions*, and the solution will contain optimal coefficients. If the
+ * result returns *infeasible* or *unbounded*, the optimization has failed and the coefficients returned in the
+ * solution will reflect the final tableau reached and not be optimal.
+ */
+export function simplex (objective, constraints) {
+    
+    let [model, variables, type] = parseModel (objective, constraints);
+    if (model.length == 0) return {solution: [], result: ''};
+
+    let tableau;
+    let result;
+
+    model.forEach(row => { /* ensure rhs is positive */
+        if (row[row.length - 1] &lt; 0) {
+            row.forEach(item => {item *= -1});
+        };
+    });
+
+    let {basicVariables, nonBasicVariables} = getVariables(model, variables);
+    let isTwoPhase = variables.some (variable => {return testVariable(variable, ['a'])});
+
+    if (isTwoPhase) {
+        let originalObjective = model.pop(); /* ignore the original objective function for now */
+        tableau = buildPhaseTwoTableau (model, variables);
+        [tableau, result] = executeSimplex (tableau, variables, basicVariables, nonBasicVariables, 'min');
+        if (result == 'unbounded') return buildSolution(tableau, basicVariables, nonBasicVariables, result);
+        [tableau, result] = cleanPhaseTwoTableau(tableau, originalObjective, variables, basicVariables, nonBasicVariables);
+        if (result == 'infeasible') return buildSolution(tableau, basicVariables, nonBasicVariables, result);
+        [tableau, result] = executeSimplex (tableau, variables, basicVariables, nonBasicVariables, type);
+    } else {
+        [tableau, result] = executeSimplex (model, variables, basicVariables, nonBasicVariables, type);
+
+    };
+    
+    return buildSolution(tableau, basicVariables, nonBasicVariables, result);        
+
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Tue Oct 26 2021 09:58:21 GMT-0400 (Eastern Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
