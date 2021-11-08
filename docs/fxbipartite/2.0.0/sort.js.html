@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>sort.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxBiPartite" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Classes</h3><ul><li><a href="biPartite.html">biPartite</a><ul class='methods'><li data-type='method' style='display: none;'><a href="biPartite.html#data">data</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#container">container</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#show">show</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#update">update</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#orient">orient</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#event">event</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#sort">sort</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#edgeMode">edgeMode</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#edgeOpacity">edgeOpacity</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#fillColors">fillColors</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#lightTextColor">lightTextColor</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#darkTextColor">darkTextColor</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#pad">pad</a></li><li data-type='method' style='display: none;'><a href="biPartite.html#duration">duration</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-bpMap.html">bpMap</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-bpMap.html#~bpMap">bpMap</a></li></ul></li><li><a href="module-calculate.html">calculate</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-calculate.html#~bars">bars</a></li><li data-type='method' style='display: none;'><a href="module-calculate.html#~calculateMainBars">calculateMainBars</a></li><li data-type='method' style='display: none;'><a href="module-calculate.html#~calculateSubBars">calculateSubBars</a></li><li data-type='method' style='display: none;'><a href="module-calculate.html#~calculateEdges">calculateEdges</a></li><li data-type='method' style='display: none;'><a href="module-calculate.html#~edgeVert">edgeVert</a></li><li data-type='method' style='display: none;'><a href="module-calculate.html#~edgeHoriz">edgeHoriz</a></li></ul></li><li><a href="module-color.html">color</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-color.html#~splitRgb">splitRgb</a></li><li data-type='method' style='display: none;'><a href="module-color.html#~hexToRgb">hexToRgb</a></li><li data-type='method' style='display: none;'><a href="module-color.html#~parseColor">parseColor</a></li><li data-type='method' style='display: none;'><a href="module-color.html#~textColor">textColor</a></li><li data-type='method' style='display: none;'><a href="module-color.html#~luminance">luminance</a></li><li data-type='method' style='display: none;'><a href="module-color.html#~contrast">contrast</a></li><li data-type='method' style='display: none;'><a href="module-color.html#~fill">fill</a></li><li data-type='method' style='display: none;'><a href="module-color.html#~subBarColors">subBarColors</a></li></ul></li><li><a href="module-container.html">container</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-container.html#~startListener">startListener</a></li><li data-type='method' style='display: none;'><a href="module-container.html#~stopListener">stopListener</a></li></ul></li><li><a href="module-font.html">font</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-font.html#~getFont">getFont</a></li></ul></li><li><a href="module-globals.html">globals</a></li><li><a href="module-init.html">init</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-init.html#~init">init</a></li></ul></li><li><a href="module-mouse.html">mouse</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-mouse.html#~interact">interact</a></li></ul></li><li><a href="module-simplexProblem.html">simplexProblem</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-simplexProblem.html#~buildSimplexProblem">buildSimplexProblem</a></li></ul></li><li><a href="module-sort.html">sort</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-sort.html#~sortKeys">sortKeys</a></li><li data-type='method' style='display: none;'><a href="module-sort.html#~sortAlpha">sortAlpha</a></li><li data-type='method' style='display: none;'><a href="module-sort.html#~sortBaryCentric">sortBaryCentric</a></li><li data-type='method' style='display: none;'><a href="module-sort.html#~sortSH">sortSH</a></li><li data-type='method' style='display: none;'><a href="module-sort.html#~adjacencyGraph">adjacencyGraph</a></li><li data-type='method' style='display: none;'><a href="module-sort.html#~graphPairs">graphPairs</a></li><li data-type='method' style='display: none;'><a href="module-sort.html#~edgeCrossings">edgeCrossings</a></li></ul></li><li><a href="module-text.html">text</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-text.html#~textDimensions">textDimensions</a></li><li data-type='method' style='display: none;'><a href="module-text.html#~getLabelLengths">getLabelLengths</a></li></ul></li><li><a href="module-transitions.html">transitions</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-transitions.html#~getTransitions">getTransitions</a></li></ul></li><li><a href="module-update.html">update</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-update.html#~update">update</a></li></ul></li><li><a href="module-utilities.html">utilities</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utilities.html#~insertPseudoDiv">insertPseudoDiv</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~checkCSS">checkCSS</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~formatPercent">formatPercent</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~overlap">overlap</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~getMargins">getMargins</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~graphSize">graphSize</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~collapsePath">collapsePath</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~initArray">initArray</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~getKeys">getKeys</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~keyPrimary">keyPrimary</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~keySecondary">keySecondary</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~value">value</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~fx">fx</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~fy">fy</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~fw">fw</a></li><li data-type='method' style='display: none;'><a href="module-utilities.html#~fh">fh</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="module-container.html#~event:containerListener">containerListener</a></li><li><a href="module-mouse.html#~event:click">click</a></li><li><a href="module-mouse.html#~event:mouseOver">mouseOver</a></li><li><a href="module-mouse.html#~event:mouseOut">mouseOut</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">sort.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module sort
+ * @desc Provides sorting algorithms to minimize edge crossings.
+ */
+
+import {initArray, keyPrimary, keySecondary, getKeys} from './utilities';
+import {default as glb} from './globals';
+
+/**
+ * @function sortKeys
+ * @desc Entry point to select the appropriate sorting algorithm.
+ * @param {Array} data A two-dimensional array of source (string), target (string),
+ * and value (number) tuples.
+ */
+export function sortKeys (data) {
+
+    switch (glb.sort) {
+        case 'alpha':
+            sortAlpha (data);
+            break;
+        case 'barycentric':
+            sortBaryCentric (data);
+            break;
+        case 'sh':
+            sortSH (data);
+            break;
+        default:
+            glb.sourceKeys = [... new Set(data.reduce((a,b) => {return a.concat(keyPrimary(b))}, []))];
+            glb.targetKeys = [... new Set(data.reduce((a,b) => {return a.concat(keySecondary(b))}, []))];
+    };
+}
+
+/**
+ * @function sortAlpha
+ * @desc Sorts the source and target keys alphanumerically.
+ * @param {Array} data A two-dimensional array of source (string), target (string),
+ * and value (number) tuples.
+ */
+function sortAlpha (data) {
+    const {sourceKeys, targetKeys} = getKeys(data);
+    glb.sourceKeys = sourceKeys.sort();
+    glb.targetKeys = targetKeys.sort();
+}
+
+/**
+ * @function sortBaryCentric
+ * @desc Sorts the data to minimize edge crossings using the barycentric method. See
+ * [K. Sugiyama,S. Tagawa and M. Toda, 1981]{@link https://ieeexplore.ieee.org/abstract/document/4308636}.
+ * @param {Array} data A two-dimensional array of source (string), target (string),
+ * and value (number) tuples.
+ */
+function sortBaryCentric (data) {
+    const {sourceKeys, targetKeys} = getKeys(data);
+
+    let matrix = [];
+
+    sourceKeys.forEach ((sourceKey, row) => {
+        let tmp = [];
+        targetKeys.forEach ((targetKey, column) => {
+            let value = data.filter(d => {return d[0] == sourceKey &amp;&amp; d[1] == targetKey}).length;
+            tmp.push(value);
+        });
+        let count = tmp.reduce((a,b) => {return b == 1 ? a + b : a}, 0);
+        let rowCenter = tmp.reduce((a,b,i) => {return b == 1 ? a + i : a}, 0) / count;
+        tmp.push(rowCenter);
+        matrix.push(tmp);
+    });
+    
+    let lastRow = targetKeys.length;
+    let rowOrderedMatrix = [];
+    let orderedSourceKeys = [];
+
+    while (matrix.length > 0) {
+        let lowIndex = matrix.reduce((a,b,i) => {
+            return b[lastRow] &lt; a[1] ? [i, b[lastRow]] : a}, [0, 1e10])[0];
+        rowOrderedMatrix.push(matrix.splice(lowIndex, 1)[0].slice(0, -1)); // don't need the row barycenters anymore
+        orderedSourceKeys.push(sourceKeys.splice(lowIndex, 1)[0]);
+    };
+
+    let columnSums = initArray(targetKeys.length);
+    let columnIndexSums = initArray(targetKeys.length);
+
+    rowOrderedMatrix.forEach ((row, rowIndex) => {
+        row.forEach ((item, column) => {
+            columnSums[column] += item;
+            columnIndexSums[column] += item == 1 ? rowIndex + 1 : 0;
+        });
+    });
+
+    let columnCenters = columnIndexSums.map((d, i) => {return d / columnSums[i] - 1});
+    let orderedTargetKeys = [];
+
+    while (columnCenters.length > 0) {
+        let lowIndex = columnCenters.indexOf(Math.min(...columnCenters));
+        columnCenters.splice(lowIndex, 1);
+        orderedTargetKeys.push(targetKeys.splice(lowIndex, 1)[0]);
+    };
+
+    glb.sourceKeys = orderedSourceKeys;
+    glb.targetKeys = orderedTargetKeys;
+
+}
+
+/**
+ * @function sortSH
+ * @desc Sorts the data to minimize edge crossings using the stochastic hill climbing method.
+ * See [Newton, M., Sýkora, O., Withall, M., &amp; Vrt’o, I., 2003]{@link https://link.springer.com/chapter/10.1007/3-540-45034-3_76}.
+ * @param {Array} data A two-dimensional array of source (string), target (string),
+ * and value (number) tuples.
+ */
+function sortSH (data) {
+
+    function randBetween (min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function randPairs (min, max) { // min and max included 
+
+        let ret = new Array(2);
+
+        let sequence = Array.apply(null, {length: max + 1 - min})
+            .map((d, i) => {
+                return i + min;
+            });
+
+        let index = randBetween(min, max);
+        ret[0] = sequence.splice(index, 1)[0];
+        max--;
+        index = randBetween(min, max);
+        ret[1] = sequence[index];
+
+        return ret;
+    };
+
+    function resortData(keys, index, data) {
+        let ret = [];
+        keys.forEach (key => {
+            data.forEach (row => {
+                if (row[index] == key) ret.push(row);
+            });
+        });
+        return ret;
+    }
+
+    const alpha = data.length**2; //1350;
+    const beta = data.length; //65;
+    let dataCopy = data.slice();
+    let [graph, sourceKeys, targetKeys] = adjacencyGraph(dataCopy);
+    const density = data.length / (sourceKeys.length + targetKeys.length);
+    const stoppingCount = (alpha * density) / (beta + density);
+    let currentCount = 0;
+    let [pairs, keyPairs] = graphPairs(graph, sourceKeys, targetKeys);
+    let crossings = edgeCrossings(pairs);
+
+
+    while (currentCount &lt; stoppingCount &amp;&amp; crossings > 0) {
+        let tmpData;
+        let leftKeys = sourceKeys.slice();
+        let rightKeys = targetKeys.slice();
+        let side = randBetween(0, 1);
+        let [index1, index2] = side == 0 ? randPairs(0, leftKeys.length - 1) : randPairs(0, rightKeys.length - 1);
+        if (side == 0) {
+            [leftKeys[index1], leftKeys[index2]] = [leftKeys[index2], leftKeys[index1]];
+            tmpData = resortData(leftKeys, 0, dataCopy)
+        } else {
+            [rightKeys[index1], rightKeys[index2]] = [rightKeys[index2], rightKeys[index1]];
+            tmpData = resortData(rightKeys, 1, dataCopy)
+        };
+
+        [graph, leftKeys, rightKeys] = adjacencyGraph(tmpData);
+        [pairs, keyPairs] = graphPairs(graph, leftKeys, rightKeys);
+        let newCrossings = edgeCrossings(pairs);
+        
+        if (newCrossings &lt; crossings) {
+            crossings = newCrossings;
+            currentCount = 0;
+            sourceKeys = leftKeys;
+            targetKeys = rightKeys;
+            dataCopy = tmpData;
+        } else {
+            currentCount += 1;
+        };
+    };
+
+    glb.sourceKeys = sourceKeys;
+    glb.targetKeys = targetKeys;
+}
+
+/**
+ * @function adjacencyGraph
+ * @desc Converts the data into an adjacency graph. Called by
+ * [sortSH]{@link module:sort~sortSH}.
+ * @param {Array} data A two-dimensional array of source (string), target (string),
+ * and value (number) tuples.
+ * @returns {Array} An array containing the adjacency graph (two-dimensional array),
+ * and the corresponding source keys (Array of strings), and target keys (array of strings).
+ */
+function adjacencyGraph (data) { //convert data to an adjacency graph
+
+    let {sourceKeys, targetKeys} = getKeys(data);
+
+    let graph = [];
+
+    sourceKeys.forEach ((sourceKey, row) => {
+        let tmp = [];
+        targetKeys.forEach ((targetKey, column) => {
+            let value = data.filter(d => {return d[0] == sourceKey &amp;&amp; d[1] == targetKey}).length;
+            tmp.push(value);
+        });
+        graph.push(tmp);
+    });
+
+    return [graph, sourceKeys, targetKeys];
+}
+
+/**
+ * @function graphPairs
+ * @desc Determines the pairs of column/row intersections in the adjacency graph
+ * that have a 1. Called by [sortSH]{@link module:sort~sortSH}.
+ * @param {Array} graph The adjacency graph computed by
+ * [adjacencyGraph]{@link module:sort~adjacencyGraph}.
+ * @param {Array} sourceKeys An array of strings containing the source keys.
+ * @param {Array} targetKeys An array of strings containing the target keys.
+ * @returns {Array} An array containing the pairs (two-dimensional array of row
+ * and column indices) and their corresponding key pairs (two-dimensional array of strings).
+ */
+function graphPairs (graph, sourceKeys, targetKeys) {
+
+    let pairs = [];
+    let keyPairs = [];
+
+    graph.forEach ((vector, row) => {
+        vector.forEach((item, column) => {
+            if (item == 1) {
+                pairs.push([row, column]);
+                keyPairs.push([sourceKeys[row], targetKeys[column]]);
+            };
+        });
+    });
+
+    return [pairs, keyPairs];
+}
+
+/**
+ * @function edgeCrossings
+ * @desc Determines the number of edge crossings in the graph.
+ * Called by [sortSH]{@link module:sort~sortSH}.
+ * @param {Array} pairs A two-dimensional array of row
+ * and column indices returned by [graphPairs]{@link module:sort~graphPairs}.
+ * @returns {number} The count of edge crossings.
+ */
+function edgeCrossings (pairs) {
+
+    let crossings = 0;
+
+    pairs.forEach ((pair, row) => {
+        for (let i = row + 1; i &lt; pairs.length; i++) {
+            if (pair[0] &lt; pairs[i][0] &amp;&amp; pair[1] > pairs[i][1]) crossings += 1;
+        };
+    });
+
+    return crossings;
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Mon Nov 08 2021 14:56:28 GMT-0500 (Eastern Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

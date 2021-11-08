@@ -2,9 +2,11 @@
     <head>
         <title>fxBiPartite Demo</title>
         <meta charset="utf-8">
+        <link rel = 'icon' type = 'image/ico' href = 'favicon.ico'>
         <style>
            
             body {
+                font-size: calc(6px + (16 - 6) * ((100vw - 600px) / (1920 - 400)));
                 margin: 0;
                 overflow: hidden;
             }
@@ -18,19 +20,11 @@
                 cursor: pointer;
             }
 
-            .biPartite-mainBar rect{
-              stroke-width: 0.5px;
-              stroke: rgb(0, 0, 0);
-              stroke-opacity: 0;
-            }
-
             .biPartite-percentage, .biPartite-label {
-                user-select: none;
                 font-family: tahoma, sans;
             }
 
             .biPartite-percentage {
-                text-anchor: middle;
                 font-size: 1.5em;
 
             }
@@ -49,8 +43,8 @@
     </head>
 
     <body>
-        <!-- <script type = 'text/javascript' src = './../../../fxBiPartite/dist/fxBiPartite.js'></script> -->
-        <script type = 'text/javascript' src = 'https://cdn.jsdelivr.net/npm/fxbipartite@latest/dist/fxBiPartite.js'></script>
+        <script type = 'text/javascript' src = './../../../fxBiPartite/dist/fxBiPartite.js'></script>
+        <!-- <script type = 'text/javascript' src = 'https://cdn.jsdelivr.net/npm/fxbipartite@latest/dist/fxBiPartite.js'></script> -->
 
         <h1>fxBiPartite Demonstration</h1>
         <div id = 'chartDiv' class = 'chart'></div>
@@ -166,11 +160,11 @@
 
             data = data.reduce( (a,b) => {return a.concat([Object.values(b)])}, []);
 
-            fxBiPartite.biPartite
-                .data(data)
-                .container(document.getElementById('chartDiv'))
+            new biPartite(data, document.getElementById('chartDiv'))
                 .sort('barycentric')
                 .pad(2)
+                .darkTextColor('black')
+                .lightTextColor('white')
                 .show();    
 
         </script>
