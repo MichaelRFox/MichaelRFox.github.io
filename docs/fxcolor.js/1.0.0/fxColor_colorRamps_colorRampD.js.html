@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>fxColor/colorRamps/colorRampD.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxColor" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Classes</h3><ul><li><a href="Color.html">Color</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Color.html#colorSpace">colorSpace</a></li><li data-type='method' style='display: none;'><a href="Color.html#observer">observer</a></li><li data-type='method' style='display: none;'><a href="Color.html#alpha">alpha</a></li><li data-type='method' style='display: none;'><a href="Color.html#CMYK">CMYK</a></li><li data-type='method' style='display: none;'><a href="Color.html#CSScolor">CSScolor</a></li><li data-type='method' style='display: none;'><a href="Color.html#HEX">HEX</a></li><li data-type='method' style='display: none;'><a href="Color.html#HSL">HSL</a></li><li data-type='method' style='display: none;'><a href="Color.html#HSV">HSV</a></li><li data-type='method' style='display: none;'><a href="Color.html#HWB">HWB</a></li><li data-type='method' style='display: none;'><a href="Color.html#LAB">LAB</a></li><li data-type='method' style='display: none;'><a href="Color.html#LCHab">LCHab</a></li><li data-type='method' style='display: none;'><a href="Color.html#LUV">LUV</a></li><li data-type='method' style='display: none;'><a href="Color.html#LCHuv">LCHuv</a></li><li data-type='method' style='display: none;'><a href="Color.html#RGB">RGB</a></li><li data-type='method' style='display: none;'><a href="Color.html#RGBint">RGBint</a></li><li data-type='method' style='display: none;'><a href="Color.html#w3cColor">w3cColor</a></li><li data-type='method' style='display: none;'><a href="Color.html#XYZ">XYZ</a></li><li data-type='method' style='display: none;'><a href="Color.html#darken">darken</a></li><li data-type='method' style='display: none;'><a href="Color.html#lighten">lighten</a></li><li data-type='method' style='display: none;'><a href="Color.html#saturate">saturate</a></li><li data-type='method' style='display: none;'><a href="Color.html#desaturate">desaturate</a></li><li data-type='method' style='display: none;'><a href="Color.html#contrastText">contrastText</a></li></ul></li><li><a href="colorRampD.html">colorRampD</a></li></ul><h3>Modules</h3><ul><li><a href="module-alpha.html">alpha</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-alpha.html#.alpha">alpha</a></li></ul></li><li><a href="module-cmyk.html">cmyk</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cmyk.html#.CMYK">CMYK</a></li></ul></li><li><a href="module-contrastText.html">contrastText</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-contrastText.html#~contrastTextOLD">contrastTextOLD</a></li><li data-type='method' style='display: none;'><a href="module-contrastText.html#~contrastText">contrastText</a></li></ul></li><li><a href="module-rgbColorSpace.html">rgbColorSpace</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~colorSpace">colorSpace</a></li><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~observer">observer</a></li></ul></li><li><a href="module-validate.html">validate</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-validate.html#~validateColorSpace">validateColorSpace</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~arrayEqual">arrayEqual</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~validate">validate</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#HSLtoRGB">HSLtoRGB</a></li><li><a href="global.html#HWBtoRGB">HWBtoRGB</a></li><li><a href="global.html#RGBtoHWB">RGBtoHWB</a></li><li><a href="global.html#RGBtoLuminance">RGBtoLuminance</a></li><li><a href="global.html#parseColor">parseColor</a></li><li><a href="global.html#parsePercent">parsePercent</a></li><li><a href="global.html#CSScolor">CSScolor</a></li><li><a href="global.html#darken">darken</a></li><li><a href="global.html#desaturate">desaturate</a></li><li><a href="global.html#HEX">HEX</a></li><li><a href="global.html#HSL">HSL</a></li><li><a href="global.html#HSV">HSV</a></li><li><a href="global.html#HWB">HWB</a></li><li><a href="global.html#LAB">LAB</a></li><li><a href="global.html#LCHab">LCHab</a></li><li><a href="global.html#LCHuv">LCHuv</a></li><li><a href="global.html#lighten">lighten</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#RGBint">RGBint</a></li><li><a href="global.html#saturate">saturate</a></li><li><a href="global.html#XYZ">XYZ</a></li><li><a href="global.html#clampColor">clampColor</a></li><li><a href="global.html#illuminant">illuminant</a></li><li><a href="global.html#returnColor">returnColor</a></li><li><a href="global.html#trim">trim</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">fxColor/colorRamps/colorRampD.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//diverging color ramp
+import {sMax} from '../../utility/sMax.js';
+//import {anyColor} from '../../utility/anyColor.js';
+// import {parseColor} from '../../utility/parseColor.js';
+import {parseColor} from '../../css/cssParsers.js';
+// import {ColorSpace, Illuminant} from '../rgbColorSpace.js';
+//import {default as fxColor} from '../../index.js';
+import {returnColor} from '../../utility/returnColor.js';
+import {Color} from '../Color.js';
+import {colorRampS} from './colorRampS.js';
+
+export function colorRampDOLD () { 
+    
+    var thisFxColor = this;
+    var me = this.colorRampD;
+    var nPrime;
+    var colorRamp = [];
+    
+    //defaults
+    var _colorCount = 9;
+    var _hue0 = 0;
+    var _hue1 = 230;
+    var _warmth = 0;
+    var _midPoint = 0.5;
+    var _contrast = Math.min (0.88, 1 - 0.06 * 5);
+    var _saturation = 0.6;
+    var _brightness = 0.75;
+    var _brightPoint = {r: 255, g: 255, b: 0};
+    
+    me.colorCount = function (count) {
+        if (arguments.length == 1) {
+            _colorCount = +count;
+            nPrime = Math.floor(_colorCount / 2) + 1;
+            _contrast = Math.min(0.88, 1.0 - 0.06 * (11 - nPrime));
+            return me;
+        } else return _colorCount;
+    };
+
+    me.hue0 = function (hue) {
+        if (arguments.length == 1) {
+            _hue0 = +hue; 
+            return me
+        } else return _hue0;
+    };
+
+    me.hue1 = function (hue) {
+        if (arguments.length == 1) {
+            _hue1 = +hue;
+            return me;
+        } else return _hue1;
+    };
+    
+    me.warmth = function (warmth) {
+        if (arguments.length == 1) {
+            _warmth = +warmth;
+            return me;
+        } else return _warmth;
+    };
+    
+    me.midPoint = function (midPoint) {
+        if (arguments.length == 1) {
+            _midPoint = +midPoint;
+            return me;
+        } else return _midPoint;
+    };
+        
+    me.contrast = function (contrast) {
+        if (arguments.length == 1) {
+            _contrast = +contrast;
+            return me;
+        } else return _contrast;
+    };
+
+    me.saturation = function (saturation) {
+        if (arguments.length == 1) {
+            _saturation = +saturation;
+            return me;
+        } else return _saturation;
+    };
+
+    me.brightness = function (brightness) {
+        if (arguments.length == 1) {
+            _brightness = +brightness;
+            return me;
+        } else return _brightness;
+    };
+
+    me.brightPoint = function (brightPoint) {
+        if (typeof brightPoint !== 'undefined') {
+            _brightPoint = parseColor (brightPoint);
+            return me;
+        } else return _brightPoint;
+    };                  
+
+    var execute = function (returnType) {
+        var neutralColor = {l: 0, c: 0, h: 0};
+        var mPrime = Math.floor(2 * _midPoint * (_colorCount - 1) + 0.5) / 2;
+        var hasMidPoint = 2 * mPrime % 2 == 0 ? 1 : 0;
+        var colorCount1 = Math.floor(_midPoint * (_colorCount - hasMidPoint));
+        var colorCount0 = _colorCount - hasMidPoint - colorCount1;
+        var ramp1 = thisFxColor.colorRampS()
+            .colorCount(colorCount1 + 1)
+            .hue(_hue1)
+            .warmth(_warmth)
+            .contrast(_contrast)
+            .saturation(_saturation)
+            .brightness(_brightness)
+            .brightPoint('rgb(' + _brightPoint.r + ',' + _brightPoint.g + ',' + _brightPoint.b + ')')
+            .LCHuv();
+        var ramp0 = thisFxColor.colorRampS()
+            .colorCount(colorCount0 + 1)
+            .hue(_hue0)
+            .warmth(_warmth)
+            .contrast(_contrast)
+            .saturation(_saturation)
+            .brightness(_brightness)
+            .brightPoint('rgb(' + _brightPoint.r + ',' + _brightPoint.g + ',' + _brightPoint.b + ')')
+            //.brightPoint(_brightPoint)    //.r, _brightPoint.g, _brightPoint.b)               
+            .LCHuv();
+        ramp0 = ramp0.reverse();    
+        var c0 = ramp0[colorCount0];
+        var c1 = ramp1[0];
+        //var ε = _midPoint - 0.5;
+        //var tPrime =  _midPoint >= 0.5 ? t / (1 + Math.abs(2 * ε)) : (t + Math.abs(2 * ε)) / (1 + Math.abs(2 * ε));
+        
+        var sN = ((c0.c + c1.c) / 2) * _warmth;
+        neutralColor.l = (c0.l + c1.l) / 2;
+        neutralColor.h = thisFxColor.RGB(_brightPoint.r, _brightPoint.g, _brightPoint.b).LCHuv().h;
+        //neutralColor.c = Math.min(sMax( neutralColor.h, neutralColor.l, thisFxColor.illuminant, thisFxColor.colorSpace), sN);
+        // neutralColor.c = Math.min(sMax( neutralColor.h, neutralColor.l, thisFxColor.Illuminant(), thisFxColor.ColorSpace()), sN);
+        neutralColor.c = Math.min(sMax(neutralColor.h, neutralColor.l, thisFxColor.ColorSpace, thisFxColor.observer), sN);
+        //neutralColor.c = Math.min(sMax( neutralColor.h, neutralColor.l, thisFxColor), sN);
+        ramp0.pop();
+        ramp1.shift();
+        
+        ramp0.push (neutralColor);
+        ramp0 = ramp0.concat(ramp1);
+        for (let i = 0; i &lt; _colorCount; i++) {
+            
+            switch (returnType) {
+                case 'RGB':
+                    colorRamp.push( thisFxColor.LCHuv(ramp0[i].l, ramp0[i].c, ramp0[i].h).RGB() );
+                    break;
+                case 'RGBhex':
+                    colorRamp.push( thisFxColor.LCHuv(ramp0[i].l, ramp0[i].c, ramp0[i].h).RGBhex() );
+                    break;
+                case 'LCHuv': case 'diagnostics':
+                    colorRamp.push({l: ramp0[i].l, c: ramp0[i].c, h: ramp0[i].h});
+                    break;
+                case 'colors':
+                    colorRamp.push (thisFxColor.clone().LCHuv(l, c, h));
+                    break;
+            };
+        };
+        return colorRamp;
+    };
+    
+    me.RGB = function () { return execute('RGB') };
+    me.RGBhex = function () { return execute('RGBhex') };
+    me.LCHuv = function () { return execute('LCHuv') };
+    me.colors = function () { return execute('colors') };
+    return me;
+};
+/**
+ * The colorRampD class
+ */
+export class colorRampD extends Color {
+
+    #colorCount = 9;
+    #hue0 = 0;
+    #hue1 = 230;
+    #warmth = 0;
+    #midPoint = 0.5;
+    #contrast = Math.min (0.88, 1 - 0.06 * 5);
+    #saturation = 0.6;
+    #brightness = 0.75;
+    // #brightPoint = RGBtoLCHuv({r: 255, g: 255, b: 0}, this.#colorSpace, this.#observer);  //yellow
+    #brightPoint = {r: 255, g: 255, b: 255};  //yellow
+
+    constructor (colorSpace = 'Adobe RGB', observer = 2) {
+        
+        super (colorSpace , observer);
+    }
+
+    colorCount (count) {
+        if (count == undefined) return this.#colorCount;
+        this.#colorCount = +count;
+        const nPrime = Math.floor(this.#colorCount / 2) + 1;
+        this.#contrast = Math.min(0.88, 1.0 - 0.06 * (11 - nPrime));
+        return this;
+    }
+
+    hue0 (hue) {
+        if (hue == undefined) return this.#hue0;
+        this.#hue0 = +hue;
+        return this;
+    }
+
+    hue1 (hue) {
+        if (hue == undefined) return this.#hue1;
+        this.#hue1 = +hue;
+        return this;
+    }
+    
+    warmth (warmth) {
+        if (warmth == undefined) return this.#warmth;
+        this.#warmth = +warmth;
+        return this;
+    }
+    
+    midPoint (midPoint) {
+        if (midPoint == undefined) return this.#midPoint;
+        this.#midPoint = +midPoint;
+        return this;
+    }
+        
+    contrast (contrast) {
+        if (contrast == undefined) return this.#contrast;
+        this.#contrast = +contrast;
+        return this;
+    }
+
+    saturation (saturation) {
+        if (saturation == undefined) return this.#saturation;
+        this.#saturation = +saturation;
+        return this;
+    }
+
+    brightness (brightness) {
+        if (brightness == undefined) return this.#brightness;
+        this.#brightness = +brightness;
+        return this;
+    }
+
+    brightPoint (brightPoint) {
+        if (brightPoint == 'undefined') return this.#brightPoint;
+        this.CSScolor(brightPoint);
+        this.#brightPoint = XYZtoRGB(this.XYZ(), this.colorSpace());
+        return this;
+    }
+
+    generate (format = 'rgb') {
+
+        let neutralColor = {l: 0, c: 0, h: 0};
+        let mPrime = Math.floor(2 * this.#midPoint * (this.#colorCount - 1) + 0.5) / 2;
+        let hasMidPoint = 2 * mPrime % 2 == 0 ? 1 : 0;
+        let colorCount1 = Math.floor(this.#midPoint * (this.#colorCount - hasMidPoint));
+        let colorCount0 = this.#colorCount - hasMidPoint - colorCount1;
+        let ramp1 = new colorRampS(this.colorSpace(), this.observer())
+            .colorCount(colorCount1 + 1)
+            .hue(this.#hue1)
+            .warmth(this.#warmth)
+            .contrast(this.#contrast)
+            .saturation(this.#saturation)
+            .brightness(this.#brightness)
+            .brightPoint(`rgb(${this.#brightPoint.r}, ${this.#brightPoint.g}, ${this.#brightPoint.b})`)
+            .generate('lchuv');
+        let ramp0 = new colorRampS(this.colorSpace(), this.observer())
+            .colorCount(colorCount0 + 1)
+            .hue(this.#hue0)
+            .warmth(this.#warmth)
+            .contrast(this.#contrast)
+            .saturation(this.#saturation)
+            .brightness(this.#brightness)
+            .brightPoint(`rgb(${this.#brightPoint.r}, ${this.#brightPoint.g}, ${this.#brightPoint.b})`)
+            .generate('lchuv');
+        ramp0 = ramp0.reverse(); 
+        let c0 = ramp0[colorCount0];
+        let c1 = ramp1[0];
+        let sN = ((c0.c + c1.c) / 2) * this.#warmth;
+        neutralColor.l = (c0.l + c1.l) / 2;
+        neutralColor.h = RGBtoLCHuv({r: this.#brightPoint.r, g: this.#brightPoint.g, b: this.#brightPoint.b}).h; //**
+        neutralColor.c = Math.min(sMax(neutralColor.h, neutralColor.l, this.colorSpace(), this.observer()), sN);
+        ramp0.pop();
+        ramp1.shift();
+        
+        ramp0.push (neutralColor);
+        ramp0 = ramp0.concat(ramp1);
+
+        let colorRamp = [];
+        for (let i = 0; i &lt; this.#colorCount; i++) {
+            this.LCHuv({l: ramp0[i].l, c: ramp0[i].c, h: ramp0[i].h});
+            colorRamp.push(returnColor(this.XYZ(), this.colorSpace(), this.observer(), this.alpha(), format));
+        };
+        return colorRamp;
+    };
+}
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Nov 26 2021 10:26:20 GMT-0500 (Eastern Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

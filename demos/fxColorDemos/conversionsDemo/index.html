@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8">
+        <title>fxColor - Color Conversion Demonstration</title>
+        <link rel = 'icon' type = 'image/ico' href = '../../assets/favicon.ico'>
+        <link rel = 'stylesheet' href = 'index.css'>
+        <link rel = 'stylesheet' href = '../css/rangeInput.css'>
+    </head>
+
+    <body>
+        <!-- <script type = 'text/javascript' src = 'https://cdn.jsdelivr.net/npm/fxColor@latest/dist/fxColor.js'></script> -->
+        <script type='text/javascript' src = '../../../../fxColor/dist/fxColor.js'></script>
+        <script type="text/javascript" src = 'index.js'></script>
+        
+        <div class='conversionTable'>
+            <!-- <table id = 'conversionForm'> -->
+                <table>
+                    <tr>
+                        <th>Format</th>
+                    </tr>                    
+                </table>
+                <table>
+                    <tr id = 'xyz'>
+                        <td><input class='button' type='button' onclick="exec('XYZ')" value='XYZ'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr id = 'lab'>
+                        <td><input class='button' type='button' onclick="exec('LAB')" value='LAB'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr id = 'lchab'>
+                        <td><input class='button' type='button' onclick="exec('LCHab')" value='LCHab'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr id = 'luv'>
+                        <td><input class='button' type='button' onclick="exec('LUV')" value='LUV'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr id = 'lchuv'>
+                        <td><input class='button' type='button' onclick="exec('LCHuv')" value='LCHuv'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr id = 'hsv'>
+                        <td><input class='button' type='button' onclick="exec('HSV')" value='HSV'></td>
+                        <td><input type="text" id="HSVh"></td>
+                        <td><input type="text" id="HSVs"></td>
+                        <td><input type="text" id="HSVv"></td>
+                    </tr>   
+                </table>
+                <table>
+                    <tr id = 'hsl'>
+                        <td><input class='button' type='button' onclick="exec('HSL')" value='HSL'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>      
+                </table>
+                <table>
+                    <tr id = 'hwb'>
+                        <td><input class='button' type='button' onclick="exec('HWB')" value='HWB'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>      
+                </table>
+                <table>
+                    <tr id = 'rgb'>
+                        <td><input class='button' type='button' onclick="exec('RGB')" value='RGB'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>                    
+                </table>
+                <table>
+                    <tr id = 'hex'>
+                        <td><input class='button' type='button' onclick="exec('RGBhex')" value='RGBhex'></td>
+                        <td><input type="text" id="RGBhex"></td>
+                        <td colspan = '3' rowspan = '4' id='fillColor'>Contrasting Text</td>
+                    </tr>                    
+                <!-- </table> -->
+                <!-- <table> -->
+                    <tr id = 'css'>
+                        <td><input class='button' type='button' onclick="exec('RGBcss')" value='RGBcss'></td>
+                        <td><input type="text" id="RGBcss"></td>
+                    </tr>                    
+                <!-- </table> -->
+                <!-- <table> -->
+                    <tr id = 'int'>
+                        <td><input class='button' type='button' onclick="exec('RGBint')" value='RGBint'></td>
+                        <td><input type="text" id="RGBint"></td>
+                    </tr>                    
+                <!-- </table> -->
+                <!-- <table> -->
+                    <tr id = 'w3c'>
+                        <td><input class='button' type='button' onclick="exec('W3C Color')" value='W3C Color'></td>
+                        <td><input type="text" id="w3cColor"></td>
+                    </tr>                    
+                <!-- </table> -->
+                <table>
+                    <tr id = 'cmyk'>
+                        <td><input class='button' type='button' onclick="exec('CMYK')" value='CMYK'></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>                    
+                </table>
+            <!-- </table> -->
+        </div>
+        <div class='controls'>
+            <!-- <table> -->
+                <table>
+                    <tr>
+                        <td>Observer</td>
+                        <td>                     
+                            <select id='observer' onchange="exec('observer')">
+                                <option value=2>CIE 1931</option>
+                                <option value=10>CIE 1964</option>
+                            </select>
+                        </td>
+                        <td>Lightness</td>
+                        <td>
+                            <input type='button' class='button' onclick="exec('darker')" value='◄'>
+                        </td>
+                        <td>
+                            <input type='button' class='button' onclick="exec('lighter')" value='►'><br>
+                        </td>
+                    <tr>
+                        <td>RGB Color space</td>
+                        <td>
+                             <select id = 'colorSpace' onchange="exec('colorSpace')">
+                                <option value='Adobe RGB'>Adobe RGB</option>
+                                <option value='Apple RGB'>Apple RGB</option>
+                                <option value='Best RGB'>Best RGB</option>
+                                <option value='Beta RGB'>Beta RGB</option>
+                                <option value='Bruce RGB'>Bruce RGB</option>
+                                <option value='CIE RGB'>CIE RGB</option>
+                                <option value='ColorMatch RGB'>ColorMatch RGB</option>
+                                <option value='Don RGB 4'>Don RGB 4</option>
+                                <option value='ECI RGB'>ECI RGB</option>
+                                <option value='Ekta Space PS5'>Ekta Space PS5</option>
+                                <option value='NTSC RGB'>NTSC RGB</option>
+                                <option value='CPAL/SECAM RGB'>PAL/SECAM RGB</option>
+                                <option value='ProPhoto RGB'>ProPhoto RGB</option>
+                                <option value='SMPTE-C RGB'>SMPTE-C RGB</option>
+                                <option value='sRGB'>sRGB</option>
+                                <option value='Wide Gamut RGB'>Wide Gamut RGB</option>
+                            </select>  
+                        </td>
+                        <td>Saturation</td>
+                        <td>
+                            <input type='button' class='button' onclick="exec('deSaturate')" value='◄'>
+                        </td>
+                        <td>
+                            <input type='button' class='button' onclick="exec('saturate')" value='►'>
+                        </td>
+                    </tr>                    
+                </table>
+                <table>
+                    <tr>
+                        <td>Opacity</td>
+                        <td>
+                            <input type='range' class='range' id='opacity' min=0 max = 1 step=0.01 value=1 onchange="exec('opacity')">
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <td id='fillColor'>Contrasting Text</td>
+                        </td>
+                    </tr>
+                </table>
+            <!-- </table> -->
+        </div>
+
+        <script type = 'text/javascript'>
+            init();
+        </script>
+    </body>
+</html>

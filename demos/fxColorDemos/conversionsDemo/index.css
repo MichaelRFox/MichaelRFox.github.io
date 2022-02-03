@@ -1,0 +1,62 @@
+div {
+    border: solid 1px darkGray;
+}
+
+div.conversionTable, div.controls {
+    margin-left: 25%;
+    margin-top: 2em;
+    width: 50%;
+    padding: 0.5em;
+}
+
+/*div.conversionTable {
+    float: left;
+}*/
+
+/*div.controls {
+    margin: 2em;
+    display: inline-block;
+}*/
+
+.button {
+    width: 7em;
+    font-family: verdana, sans-serif;
+    font-size: 1em;
+}
+
+table {
+    font-family: tahoma, sans-serif;
+    font-size: 0.9em;
+    user-select: none;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    width:  100%;
+}
+
+td {
+    font-family: verdana, san-serif;
+    font-size: 1em;
+    padding: 0.1em 0.25em 0.1em 0.25em;
+    border: 1px solid red;
+}
+
+
+#fillColor {
+    text-align: center;
+    font-family: verdana, san-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+#controls {
+    font-family: verdana, san-serif;
+    font-size: 1em;
+    font-weight: normal;
+    width:100%;
+}
+
+select {
+    width:  100%;
+}

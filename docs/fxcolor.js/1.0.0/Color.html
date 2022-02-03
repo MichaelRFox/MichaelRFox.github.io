@@ -1,0 +1,4139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Color - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxColor" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Classes</h3><ul><li><a href="Color.html">Color</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Color.html#colorSpace">colorSpace</a></li><li data-type='method' style='display: none;'><a href="Color.html#observer">observer</a></li><li data-type='method' style='display: none;'><a href="Color.html#alpha">alpha</a></li><li data-type='method' style='display: none;'><a href="Color.html#CMYK">CMYK</a></li><li data-type='method' style='display: none;'><a href="Color.html#CSScolor">CSScolor</a></li><li data-type='method' style='display: none;'><a href="Color.html#HEX">HEX</a></li><li data-type='method' style='display: none;'><a href="Color.html#HSL">HSL</a></li><li data-type='method' style='display: none;'><a href="Color.html#HSV">HSV</a></li><li data-type='method' style='display: none;'><a href="Color.html#HWB">HWB</a></li><li data-type='method' style='display: none;'><a href="Color.html#LAB">LAB</a></li><li data-type='method' style='display: none;'><a href="Color.html#LCHab">LCHab</a></li><li data-type='method' style='display: none;'><a href="Color.html#LUV">LUV</a></li><li data-type='method' style='display: none;'><a href="Color.html#LCHuv">LCHuv</a></li><li data-type='method' style='display: none;'><a href="Color.html#RGB">RGB</a></li><li data-type='method' style='display: none;'><a href="Color.html#RGBint">RGBint</a></li><li data-type='method' style='display: none;'><a href="Color.html#w3cColor">w3cColor</a></li><li data-type='method' style='display: none;'><a href="Color.html#XYZ">XYZ</a></li><li data-type='method' style='display: none;'><a href="Color.html#darken">darken</a></li><li data-type='method' style='display: none;'><a href="Color.html#lighten">lighten</a></li><li data-type='method' style='display: none;'><a href="Color.html#saturate">saturate</a></li><li data-type='method' style='display: none;'><a href="Color.html#desaturate">desaturate</a></li><li data-type='method' style='display: none;'><a href="Color.html#contrastText">contrastText</a></li></ul></li><li><a href="colorRampD.html">colorRampD</a></li></ul><h3>Modules</h3><ul><li><a href="module-alpha.html">alpha</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-alpha.html#.alpha">alpha</a></li></ul></li><li><a href="module-cmyk.html">cmyk</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cmyk.html#.CMYK">CMYK</a></li></ul></li><li><a href="module-contrastText.html">contrastText</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-contrastText.html#~contrastTextOLD">contrastTextOLD</a></li><li data-type='method' style='display: none;'><a href="module-contrastText.html#~contrastText">contrastText</a></li></ul></li><li><a href="module-rgbColorSpace.html">rgbColorSpace</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~colorSpace">colorSpace</a></li><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~observer">observer</a></li></ul></li><li><a href="module-validate.html">validate</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-validate.html#~validateColorSpace">validateColorSpace</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~arrayEqual">arrayEqual</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~validate">validate</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#HSLtoRGB">HSLtoRGB</a></li><li><a href="global.html#HWBtoRGB">HWBtoRGB</a></li><li><a href="global.html#RGBtoHWB">RGBtoHWB</a></li><li><a href="global.html#RGBtoLuminance">RGBtoLuminance</a></li><li><a href="global.html#parseColor">parseColor</a></li><li><a href="global.html#parsePercent">parsePercent</a></li><li><a href="global.html#CSScolor">CSScolor</a></li><li><a href="global.html#darken">darken</a></li><li><a href="global.html#desaturate">desaturate</a></li><li><a href="global.html#HEX">HEX</a></li><li><a href="global.html#HSL">HSL</a></li><li><a href="global.html#HSV">HSV</a></li><li><a href="global.html#HWB">HWB</a></li><li><a href="global.html#LAB">LAB</a></li><li><a href="global.html#LCHab">LCHab</a></li><li><a href="global.html#LCHuv">LCHuv</a></li><li><a href="global.html#lighten">lighten</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#RGBint">RGBint</a></li><li><a href="global.html#saturate">saturate</a></li><li><a href="global.html#XYZ">XYZ</a></li><li><a href="global.html#clampColor">clampColor</a></li><li><a href="global.html#illuminant">illuminant</a></li><li><a href="global.html#returnColor">returnColor</a></li><li><a href="global.html#trim">trim</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Color</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Color
+        </h2>
+        
+            <div class="class-description usertext"><p>The Color class</p></div>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="Color"><span class="type-signature"></span>new Color<span class="signature">(colorSpace, observer)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Instantiates a new Color class object.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>colorSpace</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Adobe RGB</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>The rgb color space to use (optional). One of
+['Adobe RGB' | 'Apple RGB' | 'Best RGB' | 'Beta RGB' | 'Bruce RGB' |
+'CIE RGB' | 'ColorMatch RGB' | Don RGB 4' | 'ECI RGB' | 'Ekta Space PS5'
+| 'NTSC RGB' | 'PAL/SECAM RGB' | 'ProPhoto RGB' | 'SMPTE-C RGB' | 'sRGB'
+| 'Wide Gamut RGB']. <strong>Default</strong>: 'Adobe RGB'.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>observer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>2</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>The observer (optional). One of [2 | 10]. <strong>Default</strong>: 2.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="Color.html">Color</a></dt>
+            <dd></dd>
+        </dl>
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="colorSpace"><span class="type-signature"></span>colorSpace<span class="signature">(colorSpace)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line51">line 51</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Sets or returns the <a href="Color.html">Color class object's</a> color space.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>colorSpace</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The color space to set.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the colorSpace argument is passed, returns the
+<a href="Color.html">Color class Object</a>. Otherwise the current colorSpace is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="observer"><span class="type-signature"></span>observer<span class="signature">(observer)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line68">line 68</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Sets or returns the current Color class object's observer.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>observer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Which observer to set. One of [2 | 10].</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the observer argument is passed, returns the
+<a href="Color.html">Color class Object</a>. Otherwise, the current observer.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="alpha"><span class="type-signature"></span>alpha<span class="signature">(opacity)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|Number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line85">line 85</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Sets the opacity of the Color class object or alternatively returns its current value.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opacity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The opacity for 0 (transparent) to 1 (opaque).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the opacity argument is omitted, the current Color
+class object's opacity, otherwise the <a href="Color.html">Color class object</a>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="CMYK"><span class="type-signature"></span>CMYK<span class="signature">(cmyk)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line107">line 107</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+a cmyk value, or returns the cmyk value of the current Color class object.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cmyk</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>If cmyk is an array, it should contain four elements
+representing the cyan, magenta, yellow, and black components (e.g., [0.4, 0.5, 1, 0.9]).
+If cmyk is an object it should contain key/value pairs for the four color components
+(e.g., {c: 0.4, m: 1, y: 0.9, k: 1]}). If cmyk is a string, it should be a W3C CSS formatted
+string (e.g., 'cmyk(0.5, 0.5, 0.5, 0.5)'. Additionally, a fifth component component for the
+alpha channel may be added. If cmyk is an object the alpha component key should be <em>alpha</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the cmyk argument is not passed, A CSS cmyk color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., cmyk(0.5, 0.4, 1, 0.9)
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="CSScolor"><span class="type-signature"></span>CSScolor<span class="signature">(color, format)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line142">line 142</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Sets or retrieves the <a href="Color.html">Color class object's</a> color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>color</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Any valid CSS color specification.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>format</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>rgb</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>The desired format to return the
+<a href="Color.html">Color class object's</a> color. One of
+['cmyk' | 'hex' | 'hsl' | 'hsv' | 'hwb' | 'lab' | 'lch' | rgb' | 'int'].
+<strong>Default</strong>: 'rgb'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the color argument is not provided, the
+current Color class object's<a href="Color.html">Color</a> color is returned as a CSS
+RGB color specification. Otherwise, the <a href="Color.html">Color class object</a>
+is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="HEX"><span class="type-signature"></span>HEX<span class="signature">(hex)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line183">line 183</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+a RGB hex value, or returns the RGB hex value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>hex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>If hex is an array, it should contain three elements
+representing the red, green, and blue components (e.g., [0xFF, 0x80, 0x0]).
+If hex is an object it should contain key/value pairs for the three color components
+(e.g., {r: 0xFF, g: 0x80, b: 0x0]}). If hex is a string, it should be a W3C CSS formatted
+string (e.g., '#FF8000'. Additionally, a fifth component component for the
+alpha channel may be added. If hex is an object the alpha component key should be <em>alpha</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the hex argument is not passed, A CSS RGB hex color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., '#FF8000')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="HSL"><span class="type-signature"></span>HSL<span class="signature">(hsl)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line221">line 221</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+an hsl value, or returns the hls value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>hsl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The hsl argument should be either an
+array, object, or string representing the hue, saturation, and luminance
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>h: 0 to 360 (degrees)</li>
+<li>s: 0 to 100%</li>
+<li>l: 0 to 100%</li>
+</ul>
+<p>If hsl is an array, it should contain three elements
+representing the hue, saturation, and luminance components (e.g., [250, 0.5, 1]).
+If hsl is an object it should contain key/value pairs for the three color components
+(e.g., {h: 250, s: 0.5, l: 1]}). If hsl is a string, it should be a W3C CSS formatted
+string (e.g., 'hsl(250, 0.5, 1)'. Additionally, a fourth component component for the
+alpha channel may be added. If hsl is an object the alpha component key should be <em>alpha</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the hsl argument is not passed, A CSS hsl color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., 'hsl(250, 0.5, 1)')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="HSV"><span class="type-signature"></span>HSV<span class="signature">(hsv)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line266">line 266</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+an hsv value, or returns the hsv value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>hsv</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The hsv argument should be either an
+array, object, or string representing the hue, saturation, and value
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>h: 0 to 360 (degrees)</li>
+<li>s: 0 to 100%</li>
+<li>v: 0 to 100%</li>
+</ul>
+<p>If hsv is an array, it should contain three elements
+representing the hue, saturation, and value components (e.g., [250, 0.5, 1]).
+If hsv is an object it should contain key/value pairs for the three color components
+(e.g., {h: 250, s: 0.5, v: 1]}). If hsv is a string, it should be a W3C CSS formatted
+string (e.g., 'hsv(250, 0.5, 1)'. Note that hsv is not currently a W3C-accepted color
+specification, but is provided for flexibility. Additionally, a fourth component component for the
+alpha channel may be added. If hsv is an object the alpha component key should be <em>alpha</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the hsv argument is not passed, A CSS hsv color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., 'hsv(250, 0.5, 1)')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="HWB"><span class="type-signature"></span>HWB<span class="signature">(hwb)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line311">line 311</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+an hwb value, or returns the hlv value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>hwb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The hwb argument should be either an
+array, object, or string representing the hue, whiteness, and blackness
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>h: 0 to 360 (degrees)</li>
+<li>w: 0 to 100%</li>
+<li>b: 0 to 100%</li>
+</ul>
+<p>If hwb is an array, it should contain three elements
+representing the hue, saturation, and value components (e.g., [250, 0.5, 1]).
+If hwb is an object it should contain key/value pairs for the three color components
+(e.g., {h: 250, s: 0.5, v: 1]}). If hwb is a string, it should be a W3C CSS formatted
+string (e.g., 'hwb(250, 0.5, 1)'. Note that hwb is not currently a W3C-accepted color
+specification, but is provided for flexibility. Additionally, a fourth component component for the
+alpha channel may be added. If hwb is an object the alpha component key should be <em>alpha</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the hwb argument is not passed, A CSS hwb color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., 'hwb(250, 0.5, 1)')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="LAB"><span class="type-signature"></span>LAB<span class="signature">(lab)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line355">line 355</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+a CIE L*a*b value, or returns the  CIE L*a*b value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lab</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The lab argument should be either an
+array, object, or string representing the lightness, red-green, and blue-yellow
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>l: 0 to 100%</li>
+<li>a: ±160</li>
+<li>b: ±160</li>
+</ul>
+<p>If lab is an array, it should contain three elements (e.g., [0.6, -32, 64]).
+If lab is an object it should contain key/value pairs for the three color components
+(e.g., {l: 0.6, a:-32, b: 64]}). If lab is a string, it should be a W3C CSS formatted
+string (e.g., 'lab(60%, -32, 64)'. Additionally, a fourth component component for the
+alpha channel may be added. If lab is an object the alpha component key should be <em>alpha</em>.
+Valid values for the alpha component are [0..1].</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the lab argument is not passed, A CSS lab color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., 'lab(60%, -32, 64)')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="LCHab"><span class="type-signature"></span>LCHab<span class="signature">(lch)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line394">line 394</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+a CIE L*C*h(a*b*) value, or returns the CIE L*C*h(a*b*) value of the current color.
+CIE L*C*h(a*b*) is a cylindrical transformation of the CIE L*\A*B color space.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The lch argument should be either an
+array, object, or string representing the lightness, chroma, and hue
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>l: 0 to 100%</li>
+<li>c: 0 to 230</li>
+<li>h: 0 - 360 (degrees)</li>
+</ul>
+<p>If lch is an array, it should contain three elements (e.g., [0.6, 210, 300]).
+If lch is an object it should contain key/value pairs for the three color components
+(e.g., {l: 0.6, a:-32, b: 64]}). If lab is a string, it should be a W3C CSS formatted
+string (e.g., 'lab(60%, 210, 300)'. Additionally, a fourth component component for the
+alpha channel may be added. If lch is an object the alpha component key should be <em>alpha</em>.
+Valid values for the alpha component are [0..1].</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the lch argument is not passed, A CSS L*C*h color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., 'lch(60%, 210, 300)')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="LUV"><span class="type-signature"></span>LUV<span class="signature">(luv)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line441">line 441</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+a CIE L*u*v value, or returns the CIE L*u*v value of the current color.
+CIE L*u*v is a transformation of the CIE XYZ color space designed to
+achieve perceptual uniformity.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>luv</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The luv argument should be either an
+array, object, or string representing the lightness and the two chromacity
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>l: 0 to 100%</li>
+<li>u: ±100%</li>
+<li>v: ±100%</li>
+</ul>
+<p>If luv is an array, it should contain three elements (e.g., [0.6, 0.1, -0.5]).
+If lch is an object it should contain key/value pairs for the three color components
+(e.g., {l: 60%, u: 10%, v: -50%]}). If luv is a string, it should be a W3C CSS-formatted
+string (e.g., 'luv(60%, 10%, -50%)'. Additionally, a fourth component component for the
+alpha channel may be added. If luv is an object the alpha component key should be <em>alpha</em>.
+Valid values for the alpha component are [0..1].</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the luv argument is not passed, A CSS-style CIE L*u*v
+color specification of the current <a href="Color.html">Color class object's</a> color value
+(e.g., 'luv(60%, 10%, -50%)') is returned. <em>Note</em>: CIE does not currently support the
+CIE L*u*v colorspace. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="LCHuv"><span class="type-signature"></span>LCHuv<span class="signature">(lch)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line480">line 480</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+a CIE L*C*h(u*v*) value, or returns the CIE L*C*h(u*v*) value of the current color.
+CIE L*C*h(u*v*) is a cylindrical transformation of the CIE L*\u*v color space.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The lch argument should be either an
+array, object, or string representing the lightness, chroma, and hue
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>l: 0 to 100%</li>
+<li>c: 0 to 230</li>
+<li>h: 0 - 360 (degrees)</li>
+</ul>
+<p>If lch is an array, it should contain three elements (e.g., [0.6, 210, 300]).
+If lch is an object it should contain key/value pairs for the three color components
+(e.g., {l: 0.6, a:-32, b: 64]}). If lab is a string, it should be a W3C CSS formatted
+string (e.g., 'lab(60%, 210, 300)'. Additionally, a fourth component component for the
+alpha channel may be added. If lch is an object the alpha component key should be <em>alpha</em>.
+Valid values for the alpha component are [0..1].</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the lch argument is not passed, A CSS L*C*h color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., 'lch(60%, 210, 300)')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="RGB"><span class="type-signature"></span>RGB<span class="signature">(rgb)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line523">line 523</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+an rgb value, or returns the rgb value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rgb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The rgb argument should be either an
+array, object, or string representing the red, green, and blue
+components of the desired color. Valid values for these components are:</p>
+<ul>
+<li>r: 0 to 255</li>
+<li>g: 0 to 255</li>
+<li>b: 0 to 255</li>
+</ul>
+<p>If rgb is an array, it should contain three elements (e.g., [255, 128, 0]).
+If rgb is an object it should contain key/value pairs for the three color components
+(e.g., {r: 255, g: 128, b: 0]}). If rgb is a string, it should be a W3C CSS formatted
+string (e.g., 'rgb(255, 128, 0)'. Additionally, a fourth component component for the
+alpha channel may be added. If rgb is an object the alpha component key should be <em>alpha</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the rgb argument is not passed, A CSS rgb color specification
+of the current <a href="Color.html">Color class object's</a> color value (e.g., 'rgb(255, 128, 0)')
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="RGBint"><span class="type-signature"></span>RGBint<span class="signature">(int)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|Number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line549">line 549</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+an integer value, or returns the integer value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>int</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The int argument should contain an integer [0..0xFFFFFF]
+representing the desired color.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the int argument is not passed, returns the
+current <a href="Color.html">Color class object's</a> color value represented as an
+integer. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="w3cColor"><span class="type-signature"></span>w3cColor<span class="signature">(w3cColor)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line569">line 569</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+a W3C color, or returns the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>w3cColor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A valid W3C color string such as 'darkred'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the w3cColor argument is not passed, returns the
+current <a href="Color.html">Color class object's</a> color. Otherwise the
+<a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="XYZ"><span class="type-signature"></span>XYZ<span class="signature">(xyz)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>|Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line601">line 601</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Allows the stored color of the Color class object to be set by inputting
+an xyz value, or returns the xyz value of the current color.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>xyz</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The xyz argument should be either an
+array or an object representing the x, y, and z components of the desired color.
+Valid values for these components are:</p>
+<ul>
+<li>x: 0 to 1</li>
+<li>y: 0 to 1</li>
+<li>z: 0 to 1</li>
+</ul>
+<p>If xyz is an array, it should contain three elements (e.g., [0.5, 0.1, 0]).
+If xyz is an object it should contain key/value pairs for the three color components
+(e.g., {x: 0.5, y: 0.1, z: 0}).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the xyz argument is not passed, The current
+<a href="Color.html">Color class object's</a> color value (e.g.,  {x: 0.5, y: 0.1, z: 0})
+is returned. Otherwise the <a href="Color.html">Color class object</a> is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+|
+
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="darken"><span class="type-signature"></span>darken<span class="signature">(percent)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line623">line 623</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Darkens the current <a href="Color.html">Color class object's</a> color by a given factor.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>percent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string (e.g., 50%) or numerical
+(e.g., 0.5) amount to darken by.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The <a href="Color.html">Color class object</a>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="lighten"><span class="type-signature"></span>lighten<span class="signature">(percent)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line641">line 641</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Lightens the current <a href="Color.html">Color class object's</a> color by a given factor.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>percent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string (e.g., 50%) or numerical
+(e.g., 0.5) amount to lighten by.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The <a href="Color.html">Color class object</a>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="saturate"><span class="type-signature"></span>saturate<span class="signature">(percent)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line659">line 659</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Saturates the current <a href="Color.html">Color class object's</a> color by a given factor.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>percent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string (e.g., 50%) or numerical
+(e.g., 0.5) amount to saturate by.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The <a href="Color.html">Color class object</a>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="desaturate"><span class="type-signature"></span>desaturate<span class="signature">(percent)</span><span class="type-signature"> &rarr; {<a href="Color.html">Color</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line677">line 677</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Desaturates the current <a href="Color.html">Color class object's</a> color by a given factor.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>percent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+|
+
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string (e.g., 50%) or numerical
+(e.g., 0.5) amount to desaturate by.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The <a href="Color.html">Color class object</a>.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Color.html">Color</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="contrastText"><span class="type-signature"></span>contrastText<span class="signature">(format)</span><span class="type-signature"> &rarr; {String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fxColor_Color.js.html">fxColor/Color.js</a>, <a href="fxColor_Color.js.html#line700">line 700</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Computes the text color (white or black) with the highest contrast with the
+<a href="Color.html">Color class object's</a> color. See
+<a href="https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-procedure">WCAG 2.0</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>format</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>rgb</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>The desired format to return the
+<a href="Color.html">Color class object's</a> color. One of
+['cmyk' | 'hex' | 'hsl' | 'hsv' | 'hwb' | 'lab' | 'lch' | rgb' | 'int'].
+<strong>Default</strong>: 'rgb'.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>A W3C-formatted color specification of the requested forat
+for either white or black.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Nov 26 2021 10:26:21 GMT-0500 (Eastern Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>conversions/rgbConversions.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxColor" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Classes</h3><ul><li><a href="Color.html">Color</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Color.html#colorSpace">colorSpace</a></li><li data-type='method' style='display: none;'><a href="Color.html#observer">observer</a></li><li data-type='method' style='display: none;'><a href="Color.html#alpha">alpha</a></li><li data-type='method' style='display: none;'><a href="Color.html#CMYK">CMYK</a></li><li data-type='method' style='display: none;'><a href="Color.html#CSScolor">CSScolor</a></li><li data-type='method' style='display: none;'><a href="Color.html#HEX">HEX</a></li><li data-type='method' style='display: none;'><a href="Color.html#HSL">HSL</a></li><li data-type='method' style='display: none;'><a href="Color.html#HSV">HSV</a></li><li data-type='method' style='display: none;'><a href="Color.html#HWB">HWB</a></li><li data-type='method' style='display: none;'><a href="Color.html#LAB">LAB</a></li><li data-type='method' style='display: none;'><a href="Color.html#LCHab">LCHab</a></li><li data-type='method' style='display: none;'><a href="Color.html#LUV">LUV</a></li><li data-type='method' style='display: none;'><a href="Color.html#LCHuv">LCHuv</a></li><li data-type='method' style='display: none;'><a href="Color.html#RGB">RGB</a></li><li data-type='method' style='display: none;'><a href="Color.html#RGBint">RGBint</a></li><li data-type='method' style='display: none;'><a href="Color.html#w3cColor">w3cColor</a></li><li data-type='method' style='display: none;'><a href="Color.html#XYZ">XYZ</a></li><li data-type='method' style='display: none;'><a href="Color.html#darken">darken</a></li><li data-type='method' style='display: none;'><a href="Color.html#lighten">lighten</a></li><li data-type='method' style='display: none;'><a href="Color.html#saturate">saturate</a></li><li data-type='method' style='display: none;'><a href="Color.html#desaturate">desaturate</a></li><li data-type='method' style='display: none;'><a href="Color.html#contrastText">contrastText</a></li></ul></li><li><a href="colorRampD.html">colorRampD</a></li></ul><h3>Modules</h3><ul><li><a href="module-alpha.html">alpha</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-alpha.html#.alpha">alpha</a></li></ul></li><li><a href="module-cmyk.html">cmyk</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cmyk.html#.CMYK">CMYK</a></li></ul></li><li><a href="module-contrastText.html">contrastText</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-contrastText.html#~contrastTextOLD">contrastTextOLD</a></li><li data-type='method' style='display: none;'><a href="module-contrastText.html#~contrastText">contrastText</a></li></ul></li><li><a href="module-rgbColorSpace.html">rgbColorSpace</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~colorSpace">colorSpace</a></li><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~observer">observer</a></li></ul></li><li><a href="module-validate.html">validate</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-validate.html#~validateColorSpace">validateColorSpace</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~arrayEqual">arrayEqual</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~validate">validate</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#HSLtoRGB">HSLtoRGB</a></li><li><a href="global.html#HWBtoRGB">HWBtoRGB</a></li><li><a href="global.html#RGBtoHWB">RGBtoHWB</a></li><li><a href="global.html#RGBtoLuminance">RGBtoLuminance</a></li><li><a href="global.html#parseColor">parseColor</a></li><li><a href="global.html#parsePercent">parsePercent</a></li><li><a href="global.html#CSScolor">CSScolor</a></li><li><a href="global.html#darken">darken</a></li><li><a href="global.html#desaturate">desaturate</a></li><li><a href="global.html#HEX">HEX</a></li><li><a href="global.html#HSL">HSL</a></li><li><a href="global.html#HSV">HSV</a></li><li><a href="global.html#HWB">HWB</a></li><li><a href="global.html#LAB">LAB</a></li><li><a href="global.html#LCHab">LCHab</a></li><li><a href="global.html#LCHuv">LCHuv</a></li><li><a href="global.html#lighten">lighten</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#RGBint">RGBint</a></li><li><a href="global.html#saturate">saturate</a></li><li><a href="global.html#XYZ">XYZ</a></li><li><a href="global.html#clampColor">clampColor</a></li><li><a href="global.html#illuminant">illuminant</a></li><li><a href="global.html#returnColor">returnColor</a></li><li><a href="global.html#trim">trim</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">conversions/rgbConversions.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// RGB conversions
+import {invCompand} from '../utility/compand.js';
+import {matrixMult} from '../utility/matrixMult.js';
+import {w3cColors} from '../data/w3cColors.js';
+import {trim} from '../utility/trim.js';
+
+export function RGBtoHSV (rgbColor) {
+    
+    const r = rgbColor.r / 255;
+    const g = rgbColor.g / 255;
+    const b = rgbColor.b / 255;
+    const min = Math.min(r, g, b);
+    const max = Math.max(r, g, b);
+    const δ = max - min;
+    let h;
+    
+    if (δ === 0) return {h: 0, s: 0, v: 0}
+    
+    switch (max) {
+        case r:
+            h = 60 * (((g - b) / δ) % 6);
+            break;
+        case g:
+            h = 60 * (2 + ((b - r) / δ));
+            break;
+        case b:
+            h = 60 * (4 + ((r - g) / δ));
+            break;
+    };
+    if (h &lt; 0) h += 360;
+    return {h: trim(h), s: trim(δ / max), v: trim(max)};
+};
+
+export function RGBtoHSL (rgbColor) {
+
+    const r = rgbColor.r / 255;
+    const g = rgbColor.g / 255;
+    const b = rgbColor.b / 255;
+
+    const min = Math.min(r, g, b);
+    const max = Math.max(r, g, b);
+    const δ = max - min;
+
+    let h, s, l;
+    
+    l = trim(0.5 * (min + max));
+
+    if (δ === 0) return {h: 0, s: 0, l: l};
+    
+    switch (max) {
+        case r:
+            h = 60 * (((g - b) / δ) % 6);
+            break;
+        case g:
+            h = 60 * (2 + ((b - r) / δ));
+            break;
+        case b:
+            h = 60 * (4 + ((r - g) / δ));
+            break;
+    };
+    if (h &lt; 0) h += 360;
+    s = l &lt; 0.5 ? δ / (max + min) : δ / (2 - max - min)
+    // s = trim(δ / (1 - Math.abs((2 * l) -1)));
+    // s = l &lt;= 0.5 ? δ / 2 * l : δ / 2 - (2 * l);
+    return {h: trim(h), s: s, l: l};
+};
+
+/**
+ * @function RGBtoHWB
+ * @desc converts an RGB object to an equivalent HWB object. Reference:
+ * [W3C documentation]{@link https://www.w3.org/TR/css-color-4/#funcdef-hwb}
+ * @param {Object} rgbColor An object on the form of {r: [0..255], g: [0..255], b: [0..255]}.
+ * @returns {Object} an HWB object in the form of {h: [0..360], w: [0..1], b: [0..1]}.
+ */
+export function RGBtoHWB (rgbColor) {
+  
+    const r = rgbColor.r / 255;
+    const g = rgbColor.g / 255;
+    const b = rgbColor.b / 255; 
+
+    const hsl = RGBtoHSL(rgbColor);
+    const white = trim(Math.min(r, g, b));
+    const black = trim(1 - Math.max(r, g, b));
+    
+    return {h: hsl.h, w: white, b: black};
+}
+
+export function RGBtoCMYK (rgbColor) {
+
+    const r = rgbColor.r / 255;
+    const g = rgbColor.g / 255;
+    const b = rgbColor.b / 255; 
+    
+    const k = trim(1 - Math.max(r, g, b));
+    const c = trim((1 - r - k) / (1 - k));
+    const m = trim((1 - g - k) / (1 - k));
+    const y = trim((1 - b - k) / (1 - k));
+    
+    return { c: c, m: m, y: y, k: k };
+};
+
+export function RGBtoXYZ (rgbColor, colorSpace) {
+    const r = invCompand(rgbColor.r / 255.0, colorSpace.gammaRGB);
+    const g = invCompand(rgbColor.g / 255.0, colorSpace.gammaRGB);
+    const b = invCompand(rgbColor.b / 255.0, colorSpace.gammaRGB);
+    const xyz = matrixMult ([r, g, b], colorSpace.rgb2xyz);
+    return {x: trim(xyz[0]), y: trim(xyz[1]), z: trim(xyz[2])};
+};
+
+export function RBGtoLCHuv (rgbColor, colorSpace, observer) {
+    return LUVtoLCHuv(XYZtoLUV(RGBtoXYZ(rgbColor, colorSpace), colorSpace, observer));
+}
+
+export function RGBtoHEX (rgbColor) {
+    const r = String('00' + rgbColor.r.toString(16)).slice(-2);
+    const g = String('00' + rgbColor.g.toString(16)).slice(-2);
+    const b = String('00' + rgbColor.b.toString(16)).slice(-2);
+    return (`#${r}${g}${b}`).toUpperCase();
+};
+
+export function HEXtoRGB (hexColor) {
+    const r = parseInt(hexColor.slice(1, 3), 16);
+    const g = parseInt(hexColor.slice(3, 5), 16);
+    const b = parseInt(hexColor.slice(5, 7), 16);
+    return {r: r, g: g, b: b};
+}
+
+export function RGBtoINT (rgbColor) {
+
+    const r = rgbColor.r &lt;&lt; 16;
+    const g = rgbColor.g &lt;&lt; 8;
+    const b = rgbColor.b;
+
+    return r + g + b;
+}
+
+export function INTtoRGB (int) {
+    
+    const r = int >> 16 &amp; 0xFF;
+    const g = int >> 8 &amp; 0xFF;
+    const b = int &amp; 0xFF; 
+
+    return {r: r, g: g, b: b};
+}
+
+export function RGBtoW3C (rgbColor) {
+
+    const hexColor = RGBtoHEX(rgbColor);
+    return Object.keys(w3cColors).find(key => w3cColors[key] === hexColor);
+}
+
+export function W3CtoRGB (w3cColor) {
+
+    const hexColor = w3cColors[w3cColor.toLowerCase()];
+    if (hexColor != undefined) return HEXtoRGB(hexColor);
+}
+
+/**
+ * @function RGBtoLuminance
+ * @desc Computes the luminance of an rgb color. See
+ * {@link https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-procedure}
+ * @param {Object} rgbColor An object representing and RGB color (e.g., {r: 255, g: 128, g: 0}).
+ * @returns {Number} The relative luminance of the input color.
+ */
+export function RGBtoLuminance(rgbColor) {
+
+    const a = [rgbColor.r, rgbColor.g, rgbColor.b].map(function (v) {
+        v /= 255;
+        return v &lt;= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Nov 26 2021 10:26:20 GMT-0500 (Eastern Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

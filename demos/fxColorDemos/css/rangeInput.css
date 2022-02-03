@@ -1,0 +1,90 @@
+:root {
+  --dark: #777777;
+  --light: #ffffff;
+  /*--background: rgb(255,255,255);*/
+  --trackWidth: 100%;
+  --trackHeight: 0.5rem;
+  /*--trackBackground: #053a5f;*/
+  /*background: rgb(51,51,51);*/
+  --trackBackground: linear-gradient(0deg, var(--dark) 0%, var(--light) 50%, var(--dark) 100%);
+  --trackBorder: 1px solid var(--dark);
+  --trackBorderRadius: var(--trackHeight);
+  /*--thumbBackgroundColor: #5cd5eb;*/
+  --thumbHeight: 1rem;
+  --thumbWidth: 1rem;
+  --thumbBackground: radial-gradient(circle, var(--light) 0%, var(--dark) 100%);
+  --thumbBorderRadius: 100%;
+  --focusBorder: 1px solid var(--dark);
+  --focusOutline: 3px solid var(--dark);
+  --focusOutlineOffset: 0.125rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: var(--trackWidth);
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--trackBackground);
+  height: var(--trackHeight);
+  border: var(--trackBorder);
+  border-radius: var(--trackBorderRadius);
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: var(--trackBackground);
+  height: var(--trackHeight);
+  border: var(--trackBorder);
+  border-radius: var(--trackBorderRadius);
+}
+
+/** Thumb Styles **/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   appearance: none;
+   margin-top: calc((var(--trackHeight) / 2) - (var(--thumbHeight) /2));
+   background: var(--background);
+   background: var(--thumbBackground);
+   height: var(--thumbHeight);
+   width: var(--thumbWidth);
+   border-radius: var(--thumbBorderRadius);  
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 0;
+    background: var(--thumbBackground);
+    height: var(--thumbHeight);
+    width: var(--thumbWidth);
+    border-radius: var(--thumbBorderRadius);  
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: var(--focusBorder);
+  outline: var(--focusOutline);
+  outline-offset: var(--focusOutlineOffset);
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+  border: var(--focusBorder);
+  outline: var(--focusOutline);
+  outline-offset: var(--focusOutlineOffset);     
+}
+
+/*** IE ***/

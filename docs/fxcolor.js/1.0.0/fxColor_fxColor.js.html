@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>fxColor/fxColor.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxColor" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Classes</h3><ul><li><a href="fxColor.html">fxColor</a></li></ul><h3>Modules</h3><ul><li><a href="module-alpha.html">alpha</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-alpha.html#.alpha">alpha</a></li></ul></li><li><a href="module-cmyk.html">cmyk</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-cmyk.html#.CMYK">CMYK</a></li></ul></li><li><a href="module-contrastText.html">contrastText</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-contrastText.html#~contrastText">contrastText</a></li></ul></li><li><a href="module-rgbColorSpace.html">rgbColorSpace</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~colorSpace">colorSpace</a></li><li data-type='method' style='display: none;'><a href="module-rgbColorSpace.html#~observer">observer</a></li></ul></li><li><a href="module-validate.html">validate</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-validate.html#~validateColorSpace">validateColorSpace</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~arrayEqual">arrayEqual</a></li><li data-type='method' style='display: none;'><a href="module-validate.html#~validate">validate</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#HSLtoRGB">HSLtoRGB</a></li><li><a href="global.html#HWBtoRGB">HWBtoRGB</a></li><li><a href="global.html#RGBtoHWB">RGBtoHWB</a></li><li><a href="global.html#parseCssColor">parseCssColor</a></li><li><a href="global.html#HEX">HEX</a></li><li><a href="global.html#HSL">HSL</a></li><li><a href="global.html#HSV">HSV</a></li><li><a href="global.html#HWB">HWB</a></li><li><a href="global.html#LAB">LAB</a></li><li><a href="global.html#LCHab">LCHab</a></li><li><a href="global.html#LCHuv">LCHuv</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#RGBint">RGBint</a></li><li><a href="global.html#illuminant">illuminant</a></li><li><a href="global.html#trim">trim</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">fxColor/fxColor.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// import {validateColorSpace} from './utility/validate.js';
+import {rgbColorSpaces /*, illuminants */} from '../data/rgbColorSpaces.js';
+
+import {colorSpace, observer} from './rgbColorSpace.js'
+import {HSL} from './hsl.js';
+import {HSV} from './hsv.js';
+import {HWB} from './hwb.js';
+import {LAB} from './lab.js';
+import {LUV} from './luv.js';
+import {LCHab} from './lchAb.js';
+import {LCHuv} from './lchUv.js';
+import {RGB} from './rgb.js';
+// import {RGBcss} from './rgbCss.js';
+import {HEX} from './hex.js';
+import {RGBint} from './rgbInt.js';
+import {XYZ} from './xyz.js';
+import {CMYK} from './cmyk.js';
+import {w3cColor} from './w3cColor.js';
+import {color} from './color.js';
+import {alpha} from './alpha.js';
+import {clone} from './clone.js';
+import {contrastText} from './contrastText.js';
+import {lighten} from './lighten.js';
+import {darken} from './darken.js';
+import {saturate} from './saturate.js';
+import {desaturate} from './desaturate.js';
+import {colorRampD} from './colorRamps/colorRampD.js';
+import {colorRampQ} from './colorRamps/colorRampQ.js';
+import {colorRampS} from './colorRamps/colorRampS.js';
+
+/**
+ * The fxColor class
+ */
+export class fxColor {
+
+    colorSpace = rgbColorSpaces.filter(d => d.name == 'Adobe RGB')[0];
+    // illuminant = illuminants.filter(d => d.name = 'D65')[0];;
+    observer = 2;
+    xyz = {x: 0, y: 0, z: 0};
+    alpha = 1;
+    outOfGamut = false;
+    
+    /**
+     * Instantiates a new fxColor class object [rgb]{@link global:rgb}, [rgb2]{@link fxColor#rgb}
+     * @param {string} colorSpace The rgb color space to use (optional). One of ['Adobe RGB' | 'Apple RGB' | 'Best RGB' | 'Beta RGB' | 'Bruce RGB' | 'CIE RGB' | 'ColorMatch RGB' |
+     * 'Don RGB 4' | 'ECI RGB' | 'Ekta Space PS5' | 'NTSC RGB' | 'PAL/SECAM RGB' | 'ProPhoto RGB' | 'SMPTE-C RGB' | 'sRGB' | 'Wide Gamut RGB']. **Default**: 'Adobe RGB'.
+     * @param {number} observer The observer (optional). One of [2 | 10]. **Default**: 2.
+     */
+    constructor (colorSpace = 'Adobe RGB', observer = 2) {
+
+        this.colorSpace(colorSpace);
+        this.observer(observer);
+    }
+}
+
+/**
+ * @memberof fxColor
+ * @borrows module:rgbColorSpace~colorSpace as fxColor#colorSpace
+ */
+fxColor.prototype.colorSpace = colorSpace;
+
+/**
+ * @memberof fxColor
+ * @borrows module:rgbColorSpace~observer as fxColor#observer
+ */
+fxColor.prototype.observer = observer;
+fxColor.prototype.HSL = HSL;
+fxColor.prototype.HSV = HSV;
+fxColor.prototype.HWB = HWB;
+fxColor.prototype.LAB = LAB;
+fxColor.prototype.LUV = LUV;
+fxColor.prototype.LCHab = LCHab;
+fxColor.prototype.LCHuv = LCHuv;
+
+/**
+ * @memberof fxColor
+ * @borrows rgb.rgb
+ */
+fxColor.prototype.RGB = RGB;
+// fxColor.prototype.RGBcss = RGBcss;
+fxColor.prototype.HEX = HEX;
+fxColor.prototype.RGBint = RGBint;
+fxColor.prototype.XYZ = XYZ;
+
+/**
+ * @memberof fxColor
+ * @borrows module:cmyk~CMYK as fxColor#CMYK
+ */
+fxColor.prototype.CMYK = CMYK;
+
+fxColor.prototype.w3cColor = w3cColor;
+fxColor.prototype.color = color;
+
+/**
+ * @memberof fxColor
+ * @borrows module:alpha.alpha as fxColor~alpha
+ */
+fxColor.prototype.alpha = alpha;
+
+fxColor.prototype.clone = clone;
+
+/**
+ * @memberof fxColor
+ * @borrows module:contrastText~contrastText as contrastText
+ */
+fxColor.prototype.contrastText = contrastText;
+
+fxColor.prototype.lighten = lighten;
+fxColor.prototype.darken = darken;
+fxColor.prototype.saturate = saturate;
+fxColor.prototype.colorRampD = colorRampD;
+fxColor.prototype.colorRampQ = colorRampQ;
+fxColor.prototype.colorRampS = colorRampS;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Mon Nov 22 2021 13:26:28 GMT-0500 (Eastern Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
