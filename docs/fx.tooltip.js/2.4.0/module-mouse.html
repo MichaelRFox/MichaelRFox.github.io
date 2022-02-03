@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>mouse - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/MichaelRFox/fxToolTip.js" target="_blank" class="menu-item" id="source_link" >Source Code</a></h2><h3>Classes</h3><ul><li><a href="Tip.html">Tip</a><ul class='methods'><li data-type='method' style='display: none;'><a href="Tip.html#content">content</a></li><li data-type='method' style='display: none;'><a href="Tip.html#orientation">orientation</a></li><li data-type='method' style='display: none;'><a href="Tip.html#preferredOrientation">preferredOrientation</a></li><li data-type='method' style='display: none;'><a href="Tip.html#autoPosition">autoPosition</a></li><li data-type='method' style='display: none;'><a href="Tip.html#autoSize">autoSize</a></li><li data-type='method' style='display: none;'><a href="Tip.html#mousePoint">mousePoint</a></li><li data-type='method' style='display: none;'><a href="Tip.html#trackMouse">trackMouse</a></li><li data-type='method' style='display: none;'><a href="Tip.html#cursor">cursor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#font">font</a></li><li data-type='method' style='display: none;'><a href="Tip.html#foregroundColor">foregroundColor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#backgroundColor">backgroundColor</a></li><li data-type='method' style='display: none;'><a href="Tip.html#backgroundOpacity">backgroundOpacity</a></li><li data-type='method' style='display: none;'><a href="Tip.html#padding">padding</a></li><li data-type='method' style='display: none;'><a href="Tip.html#borderRadius">borderRadius</a></li><li data-type='method' style='display: none;'><a href="Tip.html#boxShadow">boxShadow</a></li><li data-type='method' style='display: none;'><a href="Tip.html#transitionVisible">transitionVisible</a></li><li data-type='method' style='display: none;'><a href="Tip.html#transitionHidden">transitionHidden</a></li><li data-type='method' style='display: none;'><a href="Tip.html#arrowSize">arrowSize</a></li><li data-type='method' style='display: none;'><a href="Tip.html#width">width</a></li><li data-type='method' style='display: none;'><a href="Tip.html#maxWidth">maxWidth</a></li><li data-type='method' style='display: none;'><a href="Tip.html#minWidth">minWidth</a></li><li data-type='method' style='display: none;'><a href="Tip.html#height">height</a></li><li data-type='method' style='display: none;'><a href="Tip.html#maxHeight">maxHeight</a></li><li data-type='method' style='display: none;'><a href="Tip.html#minHeight">minHeight</a></li><li data-type='method' style='display: none;'><a href="Tip.html#remove">remove</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-fxTip.html">fxTip</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fxTip.html#~create">create</a></li><li data-type='method' style='display: none;'><a href="module-fxTip.html#~remove">remove</a></li><li data-type='method' style='display: none;'><a href="module-fxTip.html#~checkDOM">checkDOM</a></li></ul></li><li><a href="module-index.html">index</a></li><li><a href="module-init.html">init</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-init.html#~setup">setup</a></li><li data-type='method' style='display: none;'><a href="module-init.html#~closeDown">closeDown</a></li></ul></li><li><a href="module-mouse.html">mouse</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-mouse.html#~getMouseCoordinates">getMouseCoordinates</a></li><li data-type='method' style='display: none;'><a href="module-mouse.html#~suspend">suspend</a></li></ul></li><li><a href="module-options.html">options</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-options.html#~applyOptions">applyOptions</a></li><li data-type='method' style='display: none;'><a href="module-options.html#~resetOptions">resetOptions</a></li></ul></li><li><a href="module-orient.html">orient</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-orient.html#~position">position</a></li><li data-type='method' style='display: none;'><a href="module-orient.html#~optimumOrientation">optimumOrientation</a></li><li data-type='method' style='display: none;'><a href="module-orient.html#~getOrientation">getOrientation</a></li></ul></li><li><a href="module-style.html">style</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-style.html#~getRule">getRule</a></li><li data-type='method' style='display: none;'><a href="module-style.html#~getRuleIndex">getRuleIndex</a></li></ul></li><li><a href="module-tips.html">tips</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-tips.html#~getTipByElementId">getTipByElementId</a></li><li data-type='method' style='display: none;'><a href="module-tips.html#~sizeTip">sizeTip</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-utils.html#~getElementCoordinates">getElementCoordinates</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~overlap">overlap</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~hexToRgb">hexToRgb</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~createPseudoDiv">createPseudoDiv</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~parseColor">parseColor</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~parseSize">parseSize</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkSize">checkSize</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkBoolean">checkBoolean</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkFontFamily">checkFontFamily</a></li><li data-type='method' style='display: none;'><a href="module-utils.html#~checkCSS">checkCSS</a></li></ul></li></ul><h3>Events</h3><ul><li><a href="module-fxTip.html#~event:detectTargetRemoval">detectTargetRemoval</a></li><li><a href="module-mouse.html#~event:mouseover">mouseover</a></li><li><a href="module-mouse.html#~event:mousemove">mousemove</a></li><li><a href="module-mouse.html#~event:mouseout">mouseout</a></li><li><a href="module-utils.html#~event:windowResized">windowResized</a></li></ul><h3>Global</h3><ul><li><a href="global.html#targetTimer">targetTimer</a></li><li><a href="global.html#sheet">sheet</a></li><li><a href="global.html#rules">rules</a></li><li><a href="global.html#ttDiv">ttDiv</a></li><li><a href="global.html#ttContainer">ttContainer</a></li><li><a href="global.html#beforeRule">beforeRule</a></li><li><a href="global.html#afterRule">afterRule</a></li><li><a href="global.html#targetRule">targetRule</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#mouseX">mouseX</a></li><li><a href="global.html#mouseY">mouseY</a></li><li><a href="global.html#tips">tips</a></li><li><a href="global.html#tipsIndex">tipsIndex</a></li><li><a href="global.html#windowWidth">windowWidth</a></li><li><a href="global.html#windowHeight">windowHeight</a></li><li><a href="global.html#aspectRatio">aspectRatio</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">mouse</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext"><p>The mouse module provides three event listener functions for mouseover, mouseout, and mousemove
+events. Additionally, it provides a suspend function which is exposed by the
+<a href="module-index.html#~default">default</a> object, which is exported in <a href="module-index.html">index.js</a>.</p></div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~timer"><span class="type-signature">(inner) </span>timer<span class="type-signature"> :number</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line35">line 35</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Countdown timer that executes a on mouseout event
+to ensure that the .fxToolTip visibility CSS rule
+is not set to hidden until the current tooltip's transition to hidden is completed.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~suspended"><span class="type-signature">(inner) </span>suspended<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line42">line 42</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Current state of the <a href="module-mouse.html#~suspend">suspended</a> toggle.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~getMouseCoordinates"><span class="type-signature">(inner) </span>getMouseCoordinates<span class="signature">(event)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line44">line 44</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Internal helper function which retrieves the current X and Y coordinates in the client window
+and stores them in the global variables mouseX and mouseY.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The firing window event</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~suspend"><span class="type-signature">(inner) </span>suspend<span class="signature">(suspendTips)</span><span class="type-signature"> &rarr; {boolean|undefined}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line153">line 153</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This method is useful for temporarily suspending and re-enabling tooltips globally
+in such cases where other on-screen interaction may be interfered with by the tooltips.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>suspendTips</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Whether or not to suspend toolTips.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>If the method is called without the suspendTips argument, the method
+returns the current state of tooltips (true for suspended, false for enabled).
+Otherwise, nothing is returned.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~event:mouseover">mouseover</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line59">line 59</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Fires when the cursor hovers over a DOM element that has a tooltip associated with it.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The firing event.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~event:mousemove">mousemove</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line93">line 93</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Fires when the cursor moves over a DOM element that has a tooltip associated with it.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The firing window event.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~event:mouseout">mouseout</h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line118">line 118</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Fires when the cursor leaves a DOM element that has a tooltip associated with it.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The firing window event.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Thu Feb 03 2022 14:54:12 GMT-0500 (Eastern Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
